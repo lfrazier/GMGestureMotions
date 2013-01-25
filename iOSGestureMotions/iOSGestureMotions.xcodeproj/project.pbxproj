@@ -28,6 +28,7 @@
 		E71451C116B2637D00C36F52 /* GMFeatureExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451BB16B2637D00C36F52 /* GMFeatureExtractor.m */; };
 		E71451C216B2637D00C36F52 /* GMGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451BD16B2637D00C36F52 /* GMGesture.m */; };
 		E71451C316B2637D00C36F52 /* GMGestureClassifier.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451BF16B2637D00C36F52 /* GMGestureClassifier.m */; };
+		E71451C616B2653C00C36F52 /* GMDistribution.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451C516B2653C00C36F52 /* GMDistribution.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		E71451BD16B2637D00C36F52 /* GMGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGesture.m; sourceTree = "<group>"; };
 		E71451BE16B2637D00C36F52 /* GMGestureClassifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGestureClassifier.h; sourceTree = "<group>"; };
 		E71451BF16B2637D00C36F52 /* GMGestureClassifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGestureClassifier.m; sourceTree = "<group>"; };
+		E71451C416B2653C00C36F52 /* GMDistribution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMDistribution.h; sourceTree = "<group>"; };
+		E71451C516B2653C00C36F52 /* GMDistribution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMDistribution.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +153,8 @@
 				E71451BD16B2637D00C36F52 /* GMGesture.m */,
 				E71451BE16B2637D00C36F52 /* GMGestureClassifier.h */,
 				E71451BF16B2637D00C36F52 /* GMGestureClassifier.m */,
+				E71451C416B2653C00C36F52 /* GMDistribution.h */,
+				E71451C516B2653C00C36F52 /* GMDistribution.m */,
 			);
 			path = GestureMotions;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 				E71451C116B2637D00C36F52 /* GMFeatureExtractor.m in Sources */,
 				E71451C216B2637D00C36F52 /* GMGesture.m in Sources */,
 				E71451C316B2637D00C36F52 /* GMGestureClassifier.m in Sources */,
+				E71451C616B2653C00C36F52 /* GMDistribution.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

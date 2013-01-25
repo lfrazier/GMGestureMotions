@@ -7,7 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GMFeatureExtractor.h"
+#import "DTWAlgorithm.h"
+#import "GMDistribution.h"
 
-@interface GMGestureClassifier : NSObject
+@interface GMGestureClassifier : NSObject {
+    GMFeatureExtractor *featureExtractor;
+    NSArray *trainingSet;
+    NSString *activeTrainingSet;
+}
+
+@property (nonatomic, retain) GMFeatureExtractor *featureExtractor;
+
+- (id)initWithFeatureExtractor:(GMFeatureExtractor *)fE;
+- (GMDistribution *)classifySignal:(NSString *)trainingSetName withGesture:(GMGesture *)signal;
 
 @end
