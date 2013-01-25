@@ -1,5 +1,5 @@
 //
-//  GMSecondViewController.h
+//  GMFirstViewController.h
 //  iOSGestureMotions
 //
 //  Created by Lauren Frazier on 1/25/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GMSecondViewController : UIViewController
+@interface GMRecordViewController : UIViewController
 
 @end

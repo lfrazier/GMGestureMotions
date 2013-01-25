@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Lauren Frazier. All rights reserved.
 //
 
-#import "GMFirstViewController.h"
+#import "GMRecordViewController.h"
 
-@interface GMFirstViewController ()
+@interface GMRecordViewController ()
 
 @end
 
-@implementation GMFirstViewController
+@implementation GMRecordViewController
 
 - (void)viewDidLoad
 {

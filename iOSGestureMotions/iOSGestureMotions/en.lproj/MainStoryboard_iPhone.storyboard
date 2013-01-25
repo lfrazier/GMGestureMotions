@@ -1,82 +1,81 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2837" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1921"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier First View Controller - First-->
+        <!--Record View Controller - First-->
         <scene sceneID="11">
             <objects>
-                <viewController title="First" id="2" customClass="GMFirstViewController" sceneMemberID="viewController">
+                <viewController title="First" id="2" customClass="GMRecordViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="20">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Record Gesture" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="20">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="21">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="gesture0" borderStyle="roundedRect" placeholder="gesture name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sOq-V3-MeN">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="Ikv-jk-tyi"/>
+                                    <constraint firstAttribute="width" constant="97" id="oaX-N7-3jA"/>
                                 </constraints>
-                                <string key="text">Loaded by the first view controller — an instance of GMFirstViewController — specified in the app delegate.</string>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </textView>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojL-6F-N0K">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="21" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="QBg-X6-fBV"/>
-                            <constraint firstAttribute="trailing" secondItem="20" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Qxj-1L-2Yh"/>
+                            <constraint firstItem="ojL-6F-N0K" firstAttribute="centerX" secondItem="sOq-V3-MeN" secondAttribute="centerX" type="default" id="6g5-QJ-YWL"/>
+                            <constraint firstItem="sOq-V3-MeN" firstAttribute="top" secondItem="16" secondAttribute="top" constant="235" id="ATC-MB-Rjk"/>
+                            <constraint firstAttribute="bottom" secondItem="ojL-6F-N0K" secondAttribute="bottom" constant="91" id="JtB-Fe-yqt"/>
+                            <constraint firstItem="20" firstAttribute="top" secondItem="16" secondAttribute="top" constant="123" id="Q0z-ny-yoF"/>
                             <constraint firstItem="20" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ty9-wx-CyI"/>
-                            <constraint firstItem="21" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Zmm-k2-2L7"/>
-                            <constraint firstItem="21" firstAttribute="top" secondItem="20" secondAttribute="bottom" constant="40" type="user" id="jX0-Wi-kmb"/>
-                            <constraint firstAttribute="centerY" secondItem="21" secondAttribute="centerY" type="user" id="yWk-L2-m9F"/>
+                            <constraint firstItem="ojL-6F-N0K" firstAttribute="centerX" secondItem="20" secondAttribute="centerX" type="default" id="WKn-Lw-c2G"/>
+                            <constraint firstAttribute="trailing" secondItem="20" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="t7P-p6-9UI"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="7"/>
+                    <tabBarItem key="tabBarItem" title="Record Gesture" image="first" id="7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="653" y="-138"/>
         </scene>
-        <!--class Prefix:identifier Second View Controller - Second-->
+        <!--Recognize View Controller - Second-->
         <scene sceneID="13">
             <objects>
-                <viewController title="Second" id="3" customClass="GMSecondViewController" sceneMemberID="viewController">
+                <viewController title="Second" id="3" customClass="GMRecognizeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="17">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="22">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Go!" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="22">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="23">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="cQR-IW-sY8"/>
-                                </constraints>
-                                <string key="text">Loaded by the second view controller — an instance of GMSecondViewController — specified in the app delegate.</string>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="22" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0q6-IA-e8m"/>
-                            <constraint firstAttribute="trailing" secondItem="23" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="fR4-wH-Ih7"/>
-                            <constraint firstItem="23" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fzb-YA-SeR"/>
-                            <constraint firstAttribute="centerY" secondItem="23" secondAttribute="centerY" type="user" id="llH-eD-iPS"/>
+                            <constraint firstItem="22" firstAttribute="top" secondItem="17" secondAttribute="top" constant="123" id="ijF-Bo-qQn"/>
                             <constraint firstAttribute="trailing" secondItem="22" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pc3-9Y-W42"/>
-                            <constraint firstItem="23" firstAttribute="top" secondItem="22" secondAttribute="bottom" constant="40" type="user" id="yUx-Ee-KEk"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="6"/>
+                    <tabBarItem key="tabBarItem" title="Perform Gesture" image="second" id="6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,6 +105,17 @@
         <image name="first" width="16" height="16"/>
         <image name="second" width="16" height="16"/>
     </resources>
+    <classes>
+        <class className="GMRecognizeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GMRecognizeViewController.h"/>
+        </class>
+        <class className="GMRecordViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GMRecordViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

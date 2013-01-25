@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Lauren Frazier. All rights reserved.
 //
 
-#import "GMSecondViewController.h"
+#import "GMRecognizeViewController.h"
 
-@interface GMSecondViewController ()
+@interface GMRecognizeViewController ()
 
 @end
 
-@implementation GMSecondViewController
+@implementation GMRecognizeViewController
 
 - (void)viewDidLoad
 {

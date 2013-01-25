@@ -18,12 +18,14 @@
 		E714518B16B249A500C36F52 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E714518A16B249A500C36F52 /* Default-568h@2x.png */; };
 		E714518E16B249A500C36F52 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E714518C16B249A500C36F52 /* MainStoryboard_iPhone.storyboard */; };
 		E714519116B249A500C36F52 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E714518F16B249A500C36F52 /* MainStoryboard_iPad.storyboard */; };
-		E714519416B249A500C36F52 /* GMFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E714519316B249A500C36F52 /* GMFirstViewController.m */; };
+		E714519416B249A500C36F52 /* GMRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E714519316B249A500C36F52 /* GMRecordViewController.m */; };
 		E714519616B249A500C36F52 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = E714519516B249A500C36F52 /* first.png */; };
 		E714519816B249A500C36F52 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E714519716B249A500C36F52 /* first@2x.png */; };
-		E714519B16B249A500C36F52 /* GMSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E714519A16B249A500C36F52 /* GMSecondViewController.m */; };
+		E714519B16B249A500C36F52 /* GMRecognizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E714519A16B249A500C36F52 /* GMRecognizeViewController.m */; };
 		E714519D16B249A500C36F52 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = E714519C16B249A500C36F52 /* second.png */; };
 		E714519F16B249A500C36F52 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E714519E16B249A500C36F52 /* second@2x.png */; };
+		E71451A816B24E5B00C36F52 /* GMGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451A716B24E5B00C36F52 /* GMGesture.m */; };
+		E71451AE16B2534E00C36F52 /* DTWAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451AD16B2534E00C36F52 /* DTWAlgorithm.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,14 +44,18 @@
 		E714518A16B249A500C36F52 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E714518D16B249A500C36F52 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		E714519016B249A500C36F52 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		E714519216B249A500C36F52 /* GMFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMFirstViewController.h; sourceTree = "<group>"; };
-		E714519316B249A500C36F52 /* GMFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMFirstViewController.m; sourceTree = "<group>"; };
+		E714519216B249A500C36F52 /* GMRecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMRecordViewController.h; sourceTree = "<group>"; };
+		E714519316B249A500C36F52 /* GMRecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMRecordViewController.m; sourceTree = "<group>"; };
 		E714519516B249A500C36F52 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		E714519716B249A500C36F52 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		E714519916B249A500C36F52 /* GMSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMSecondViewController.h; sourceTree = "<group>"; };
-		E714519A16B249A500C36F52 /* GMSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMSecondViewController.m; sourceTree = "<group>"; };
+		E714519916B249A500C36F52 /* GMRecognizeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMRecognizeViewController.h; sourceTree = "<group>"; };
+		E714519A16B249A500C36F52 /* GMRecognizeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMRecognizeViewController.m; sourceTree = "<group>"; };
 		E714519C16B249A500C36F52 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		E714519E16B249A500C36F52 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		E71451A616B24E5B00C36F52 /* GMGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMGesture.h; path = Gestures/GMGesture.h; sourceTree = "<group>"; };
+		E71451A716B24E5B00C36F52 /* GMGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMGesture.m; path = Gestures/GMGesture.m; sourceTree = "<group>"; };
+		E71451AC16B2534E00C36F52 /* DTWAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTWAlgorithm.h; path = Gestures/DTWAlgorithm.h; sourceTree = "<group>"; };
+		E71451AD16B2534E00C36F52 /* DTWAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTWAlgorithm.m; path = Gestures/DTWAlgorithm.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,16 +102,17 @@
 		E714517A16B249A500C36F52 /* iOSGestureMotions */ = {
 			isa = PBXGroup;
 			children = (
+				E71451A516B24DE800C36F52 /* Gestures */,
 				E714518316B249A500C36F52 /* GMAppDelegate.h */,
 				E714518416B249A500C36F52 /* GMAppDelegate.m */,
 				E714518C16B249A500C36F52 /* MainStoryboard_iPhone.storyboard */,
 				E714518F16B249A500C36F52 /* MainStoryboard_iPad.storyboard */,
-				E714519216B249A500C36F52 /* GMFirstViewController.h */,
-				E714519316B249A500C36F52 /* GMFirstViewController.m */,
+				E714519216B249A500C36F52 /* GMRecordViewController.h */,
+				E714519316B249A500C36F52 /* GMRecordViewController.m */,
 				E714519516B249A500C36F52 /* first.png */,
 				E714519716B249A500C36F52 /* first@2x.png */,
-				E714519916B249A500C36F52 /* GMSecondViewController.h */,
-				E714519A16B249A500C36F52 /* GMSecondViewController.m */,
+				E714519916B249A500C36F52 /* GMRecognizeViewController.h */,
+				E714519A16B249A500C36F52 /* GMRecognizeViewController.m */,
 				E714519C16B249A500C36F52 /* second.png */,
 				E714519E16B249A500C36F52 /* second@2x.png */,
 				E714517B16B249A500C36F52 /* Supporting Files */,
@@ -125,6 +132,17 @@
 				E714518A16B249A500C36F52 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E71451A516B24DE800C36F52 /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				E71451A616B24E5B00C36F52 /* GMGesture.h */,
+				E71451A716B24E5B00C36F52 /* GMGesture.m */,
+				E71451AC16B2534E00C36F52 /* DTWAlgorithm.h */,
+				E71451AD16B2534E00C36F52 /* DTWAlgorithm.m */,
+			);
+			name = Gestures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,8 +219,10 @@
 			files = (
 				E714518116B249A500C36F52 /* main.m in Sources */,
 				E714518516B249A500C36F52 /* GMAppDelegate.m in Sources */,
-				E714519416B249A500C36F52 /* GMFirstViewController.m in Sources */,
-				E714519B16B249A500C36F52 /* GMSecondViewController.m in Sources */,
+				E714519416B249A500C36F52 /* GMRecordViewController.m in Sources */,
+				E714519B16B249A500C36F52 /* GMRecognizeViewController.m in Sources */,
+				E71451A816B24E5B00C36F52 /* GMGesture.m in Sources */,
+				E71451AE16B2534E00C36F52 /* DTWAlgorithm.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
