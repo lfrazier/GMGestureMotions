@@ -29,6 +29,8 @@
 		E71451C216B2637D00C36F52 /* GMGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451BD16B2637D00C36F52 /* GMGesture.m */; };
 		E71451C316B2637D00C36F52 /* GMGestureClassifier.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451BF16B2637D00C36F52 /* GMGestureClassifier.m */; };
 		E71451C616B2653C00C36F52 /* GMDistribution.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451C516B2653C00C36F52 /* GMDistribution.m */; };
+		E71451C916B2F5F300C36F52 /* GMGestureRecognition.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451C816B2F5F200C36F52 /* GMGestureRecognition.m */; };
+		E71451CC16B2F78A00C36F52 /* GMGestureRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451CB16B2F78900C36F52 /* GMGestureRecorder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,10 @@
 		E71451BF16B2637D00C36F52 /* GMGestureClassifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGestureClassifier.m; sourceTree = "<group>"; };
 		E71451C416B2653C00C36F52 /* GMDistribution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMDistribution.h; sourceTree = "<group>"; };
 		E71451C516B2653C00C36F52 /* GMDistribution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMDistribution.m; sourceTree = "<group>"; };
+		E71451C716B2F5F200C36F52 /* GMGestureRecognition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGestureRecognition.h; sourceTree = "<group>"; };
+		E71451C816B2F5F200C36F52 /* GMGestureRecognition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGestureRecognition.m; sourceTree = "<group>"; };
+		E71451CA16B2F78900C36F52 /* GMGestureRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGestureRecorder.h; sourceTree = "<group>"; };
+		E71451CB16B2F78900C36F52 /* GMGestureRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGestureRecorder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,10 @@
 				E71451BF16B2637D00C36F52 /* GMGestureClassifier.m */,
 				E71451C416B2653C00C36F52 /* GMDistribution.h */,
 				E71451C516B2653C00C36F52 /* GMDistribution.m */,
+				E71451C716B2F5F200C36F52 /* GMGestureRecognition.h */,
+				E71451C816B2F5F200C36F52 /* GMGestureRecognition.m */,
+				E71451CA16B2F78900C36F52 /* GMGestureRecorder.h */,
+				E71451CB16B2F78900C36F52 /* GMGestureRecorder.m */,
 			);
 			path = GestureMotions;
 			sourceTree = "<group>";
@@ -249,6 +259,8 @@
 				E71451C216B2637D00C36F52 /* GMGesture.m in Sources */,
 				E71451C316B2637D00C36F52 /* GMGestureClassifier.m in Sources */,
 				E71451C616B2653C00C36F52 /* GMDistribution.m in Sources */,
+				E71451C916B2F5F300C36F52 /* GMGestureRecognition.m in Sources */,
+				E71451CC16B2F78A00C36F52 /* GMGestureRecorder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

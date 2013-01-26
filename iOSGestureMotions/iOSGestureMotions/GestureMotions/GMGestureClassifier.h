@@ -13,13 +13,20 @@
 
 @interface GMGestureClassifier : NSObject {
     GMFeatureExtractor *featureExtractor;
-    NSArray *trainingSet;
+    NSMutableArray *trainingSet;
     NSString *activeTrainingSet;
 }
 
 @property (nonatomic, retain) GMFeatureExtractor *featureExtractor;
 
 - (id)initWithFeatureExtractor:(GMFeatureExtractor *)fE;
+- (BOOL)commitData;
+- (BOOL)trainData:(GMGesture *)signal inTrainingSet:(NSString *)trainingSetName;
+- (void)loadTrainingSet:(NSString *)trainingSetName;
+- (BOOL)checkForLabel:(NSString *)label inTrainingSet:(NSString *)trainingSetName;
+- (BOOL)checkForTrainingSet:(NSString *)trainingSetName;
+- (BOOL)deleteTrainingSet:(NSString *)trainingSetName;
+- (BOOL)deleteLabel:(NSString *)labelName inTrainingSet:(NSString *)trainingSetName;
 - (GMDistribution *)classifySignal:(NSString *)trainingSetName withGesture:(GMGesture *)signal;
 
 @end
