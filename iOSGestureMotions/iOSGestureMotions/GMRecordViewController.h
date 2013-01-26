@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GMGestureRecorder.h"
 
 @interface GMRecordViewController : UIViewController
 

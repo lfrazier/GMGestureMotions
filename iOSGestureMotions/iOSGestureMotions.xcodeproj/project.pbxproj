@@ -31,6 +31,7 @@
 		E71451C616B2653C00C36F52 /* GMDistribution.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451C516B2653C00C36F52 /* GMDistribution.m */; };
 		E71451C916B2F5F300C36F52 /* GMGestureRecognition.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451C816B2F5F200C36F52 /* GMGestureRecognition.m */; };
 		E71451CC16B2F78A00C36F52 /* GMGestureRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451CB16B2F78900C36F52 /* GMGestureRecorder.m */; };
+		E71451D216B3685E00C36F52 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E71451D116B3685E00C36F52 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		E71451C816B2F5F200C36F52 /* GMGestureRecognition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGestureRecognition.m; sourceTree = "<group>"; };
 		E71451CA16B2F78900C36F52 /* GMGestureRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGestureRecorder.h; sourceTree = "<group>"; };
 		E71451CB16B2F78900C36F52 /* GMGestureRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGestureRecorder.m; sourceTree = "<group>"; };
+		E71451D116B3685E00C36F52 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E71451D216B3685E00C36F52 /* CoreMotion.framework in Frameworks */,
 				E714517516B249A500C36F52 /* UIKit.framework in Frameworks */,
 				E714517716B249A500C36F52 /* Foundation.framework in Frameworks */,
 				E714517916B249A500C36F52 /* CoreGraphics.framework in Frameworks */,
@@ -107,6 +110,7 @@
 		E714517316B249A500C36F52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E71451D116B3685E00C36F52 /* CoreMotion.framework */,
 				E714517416B249A500C36F52 /* UIKit.framework */,
 				E714517616B249A500C36F52 /* Foundation.framework */,
 				E714517816B249A500C36F52 /* CoreGraphics.framework */,
@@ -393,6 +397,7 @@
 				E71451A416B249A500C36F52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
