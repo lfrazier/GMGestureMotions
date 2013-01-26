@@ -31,6 +31,10 @@
     [infoLabel setText:infoString];
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    [gestureRecognizer stopClassificationMode];
+    gestureRecognizer.delegate = nil;
+}
 
 - (void)trainingSetDeleted:(NSString *)trainingSetName {
     

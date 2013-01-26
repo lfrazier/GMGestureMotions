@@ -17,8 +17,8 @@
         MIN_GESTURE_SIZE = 8;
         THRESHOLD = 2;
         recordMode = MOTION_DETECTION;
-        deviceUpdateInterval = 0.01;
-        noMotionLimit = 100;
+        deviceUpdateInterval = 0.05;
+        noMotionLimit = 10;
     }
     return self;
 }
@@ -62,9 +62,9 @@
     }
 }
 
-- (void)handleDeviceUpdate:(CMDeviceMotion *)motion {
-    //NSLog(@"X: %f, Y: %f, Z:%f", motion.userAcceleration.x, motion.userAcceleration.y, motion.userAcceleration.z);
-    NSArray *value = @[[NSNumber numberWithDouble:motion.userAcceleration.x], [NSNumber numberWithDouble:motion.userAcceleration.y], [NSNumber numberWithDouble:motion.userAcceleration.z]];
+- (void)handleDeviceUpdate:(CMGyroData *)motion {
+    //NSLog(@"X: %f, Y: %f, Z:%f", motion.rotationRate.x, motion.rotationRate.y, motion.rotationRate.z);
+    NSArray *value = @[[NSNumber numberWithDouble:motion.rotationRate.x], [NSNumber numberWithDouble:motion.rotationRate.y], [NSNumber numberWithDouble:motion.rotationRate.z]];
     switch (recordMode) {
         case MOTION_DETECTION:
             if (isRecording) {
@@ -105,10 +105,10 @@
 
 - (void)start {
     motionManager = [[CMMotionManager alloc] init];
-    if ([motionManager isDeviceMotionAvailable]) {
-        if (![motionManager isDeviceMotionActive]) {
-            [motionManager setDeviceMotionUpdateInterval:deviceUpdateInterval];
-            [motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMDeviceMotion *motion, NSError *error) {
+    if ([motionManager isGyroAvailable]) {
+        if (![motionManager isGyroActive]) {
+            [motionManager setGyroUpdateInterval:deviceUpdateInterval];
+            [motionManager startGyroUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMGyroData *motion, NSError *error) {
                 [self handleDeviceUpdate:motion];
             }];
         }
@@ -116,18 +116,17 @@
 }
 
 - (void)stop {
-    [motionManager stopDeviceMotionUpdates];
+    [motionManager stopGyroUpdates];
     isRunning = NO;
 }
 
 - (void)pause:(BOOL)b {
     if (b) {
-        [motionManager stopDeviceMotionUpdates];
+        [motionManager stopGyroUpdates];
     } else {
-        [motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMDeviceMotion *motion, NSError *error) {
+        [motionManager startGyroUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMGyroData *motion, NSError *error) {
             [self handleDeviceUpdate:motion];
-        }];
-    }
+        }];    }
 }
 
 @end
