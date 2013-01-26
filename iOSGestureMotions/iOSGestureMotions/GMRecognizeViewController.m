@@ -24,6 +24,11 @@
 - (void)viewDidAppear:(BOOL)animated {
     gestureRecognizer.delegate = self;
     [gestureRecognizer startClassificationMode:@"Default"];
+    NSString *infoString = @"Gestures:";
+    for (NSString *string in [gestureRecognizer getGestureList:@"Default"]) {
+        infoString = [NSString stringWithFormat:@"%@\n%@", infoString, string];
+    }
+    [infoLabel setText:infoString];
 }
 
 

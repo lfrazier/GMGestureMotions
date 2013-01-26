@@ -112,16 +112,28 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="216" translatesAutoresizingMaskIntoConstraints="NO" id="K90-MO-rlb">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="289" id="8yz-Hn-zX0"/>
+                                    <constraint firstAttribute="width" constant="216" id="CYF-S2-ezZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="22" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0q6-IA-e8m"/>
+                            <constraint firstItem="K90-MO-rlb" firstAttribute="centerX" secondItem="22" secondAttribute="centerX" type="default" id="FWM-oT-epA"/>
+                            <constraint firstItem="K90-MO-rlb" firstAttribute="top" secondItem="17" secondAttribute="top" constant="196" id="GFx-dl-NZc"/>
                             <constraint firstItem="22" firstAttribute="top" secondItem="17" secondAttribute="top" constant="123" id="ijF-Bo-qQn"/>
                             <constraint firstAttribute="trailing" secondItem="22" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pc3-9Y-W42"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Perform Gesture" image="second" id="6"/>
                     <connections>
+                        <outlet property="infoLabel" destination="K90-MO-rlb" id="PYq-gE-9I8"/>
                         <outlet property="label" destination="22" id="GGY-B5-TB6"/>
                     </connections>
                 </viewController>
@@ -153,6 +165,26 @@
         <image name="first" width="16" height="16"/>
         <image name="second" width="16" height="16"/>
     </resources>
+    <classes>
+        <class className="GMRecognizeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GMRecognizeViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="infoLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="GMRecordViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GMRecordViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonPressed:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="gestureTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="trainingSetTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

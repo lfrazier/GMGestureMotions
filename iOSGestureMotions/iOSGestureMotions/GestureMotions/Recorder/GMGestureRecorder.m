@@ -18,7 +18,7 @@
         THRESHOLD = 2;
         recordMode = MOTION_DETECTION;
         deviceUpdateInterval = 0.01;
-        noMotionLimit = 10;
+        noMotionLimit = 100;
     }
     return self;
 }

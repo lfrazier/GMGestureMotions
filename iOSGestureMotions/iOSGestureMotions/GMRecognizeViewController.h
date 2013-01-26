@@ -12,6 +12,7 @@
 @interface GMRecognizeViewController : UIViewController <GMGestureRecognitonDelegate> {
     GMGestureRecognition *gestureRecognizer;
     IBOutlet UILabel *label;
+    IBOutlet UILabel *infoLabel;
 }
 
 @end
