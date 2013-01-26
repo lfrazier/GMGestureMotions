@@ -4,6 +4,7 @@ iOSGestureMotions
 iOS port of Robert Neßelrath's Android Gesture Recognition Tool/Framework (available at http://www.dfki.de/~rnessel/tools/gesture_recognition/gesture_recognition.htm)
 
 Usage:
+
 1. Copy the GestureMotions folder into your project.
 
 2. Import "GMGestureRecognition.h"
@@ -28,4 +29,4 @@ GMGestureRecognition provides the following methods:
 	- (void)setThreshold:(float)threshold;
 	- (void)gestureRecorded:(NSArray *)values;
 
-Please see the demo app for more details. The demo app simply allows users to name and define gestures in one tab, then perform them in the other tab.
+Please see the demo app for more details. The demo app allows users to name and define gestures in one tab, then perform them in the other tab. The closest match is printed out on the screen, along with the distance to that gesture.
