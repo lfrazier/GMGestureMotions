@@ -24,14 +24,14 @@
 		E714519B16B249A500C36F52 /* GMRecognizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E714519A16B249A500C36F52 /* GMRecognizeViewController.m */; };
 		E714519D16B249A500C36F52 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = E714519C16B249A500C36F52 /* second.png */; };
 		E714519F16B249A500C36F52 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E714519E16B249A500C36F52 /* second@2x.png */; };
-		E71451C016B2637D00C36F52 /* DTWAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451B816B2637D00C36F52 /* DTWAlgorithm.m */; };
-		E71451C116B2637D00C36F52 /* GMFeatureExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451BB16B2637D00C36F52 /* GMFeatureExtractor.m */; };
-		E71451C216B2637D00C36F52 /* GMGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451BD16B2637D00C36F52 /* GMGesture.m */; };
-		E71451C316B2637D00C36F52 /* GMGestureClassifier.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451BF16B2637D00C36F52 /* GMGestureClassifier.m */; };
-		E71451C616B2653C00C36F52 /* GMDistribution.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451C516B2653C00C36F52 /* GMDistribution.m */; };
-		E71451C916B2F5F300C36F52 /* GMGestureRecognition.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451C816B2F5F200C36F52 /* GMGestureRecognition.m */; };
-		E71451CC16B2F78A00C36F52 /* GMGestureRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451CB16B2F78900C36F52 /* GMGestureRecorder.m */; };
 		E71451D216B3685E00C36F52 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E71451D116B3685E00C36F52 /* CoreMotion.framework */; };
+		E71451E916B3A88B00C36F52 /* GMGestureClassifier.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451D716B3A88B00C36F52 /* GMGestureClassifier.m */; };
+		E71451EA16B3A88B00C36F52 /* GMDistribution.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451DA16B3A88B00C36F52 /* GMDistribution.m */; };
+		E71451EB16B3A88B00C36F52 /* DTWAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451DD16B3A88B00C36F52 /* DTWAlgorithm.m */; };
+		E71451EC16B3A88B00C36F52 /* GMFeatureExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451E016B3A88B00C36F52 /* GMFeatureExtractor.m */; };
+		E71451ED16B3A88B00C36F52 /* GMGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451E316B3A88B00C36F52 /* GMGesture.m */; };
+		E71451EE16B3A88B00C36F52 /* GMGestureRecognition.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451E516B3A88B00C36F52 /* GMGestureRecognition.m */; };
+		E71451EF16B3A88B00C36F52 /* GMGestureRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451E816B3A88B00C36F52 /* GMGestureRecorder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,21 +58,21 @@
 		E714519A16B249A500C36F52 /* GMRecognizeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMRecognizeViewController.m; sourceTree = "<group>"; };
 		E714519C16B249A500C36F52 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		E714519E16B249A500C36F52 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		E71451B716B2637D00C36F52 /* DTWAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTWAlgorithm.h; sourceTree = "<group>"; };
-		E71451B816B2637D00C36F52 /* DTWAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTWAlgorithm.m; sourceTree = "<group>"; };
-		E71451BA16B2637D00C36F52 /* GMFeatureExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMFeatureExtractor.h; sourceTree = "<group>"; };
-		E71451BB16B2637D00C36F52 /* GMFeatureExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMFeatureExtractor.m; sourceTree = "<group>"; };
-		E71451BC16B2637D00C36F52 /* GMGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGesture.h; sourceTree = "<group>"; };
-		E71451BD16B2637D00C36F52 /* GMGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGesture.m; sourceTree = "<group>"; };
-		E71451BE16B2637D00C36F52 /* GMGestureClassifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGestureClassifier.h; sourceTree = "<group>"; };
-		E71451BF16B2637D00C36F52 /* GMGestureClassifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGestureClassifier.m; sourceTree = "<group>"; };
-		E71451C416B2653C00C36F52 /* GMDistribution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMDistribution.h; sourceTree = "<group>"; };
-		E71451C516B2653C00C36F52 /* GMDistribution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMDistribution.m; sourceTree = "<group>"; };
-		E71451C716B2F5F200C36F52 /* GMGestureRecognition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGestureRecognition.h; sourceTree = "<group>"; };
-		E71451C816B2F5F200C36F52 /* GMGestureRecognition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGestureRecognition.m; sourceTree = "<group>"; };
-		E71451CA16B2F78900C36F52 /* GMGestureRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGestureRecorder.h; sourceTree = "<group>"; };
-		E71451CB16B2F78900C36F52 /* GMGestureRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGestureRecorder.m; sourceTree = "<group>"; };
 		E71451D116B3685E00C36F52 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		E71451D616B3A88B00C36F52 /* GMGestureClassifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGestureClassifier.h; sourceTree = "<group>"; };
+		E71451D716B3A88B00C36F52 /* GMGestureClassifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGestureClassifier.m; sourceTree = "<group>"; };
+		E71451D916B3A88B00C36F52 /* GMDistribution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMDistribution.h; sourceTree = "<group>"; };
+		E71451DA16B3A88B00C36F52 /* GMDistribution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMDistribution.m; sourceTree = "<group>"; };
+		E71451DC16B3A88B00C36F52 /* DTWAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTWAlgorithm.h; sourceTree = "<group>"; };
+		E71451DD16B3A88B00C36F52 /* DTWAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTWAlgorithm.m; sourceTree = "<group>"; };
+		E71451DF16B3A88B00C36F52 /* GMFeatureExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMFeatureExtractor.h; sourceTree = "<group>"; };
+		E71451E016B3A88B00C36F52 /* GMFeatureExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMFeatureExtractor.m; sourceTree = "<group>"; };
+		E71451E216B3A88B00C36F52 /* GMGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGesture.h; sourceTree = "<group>"; };
+		E71451E316B3A88B00C36F52 /* GMGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGesture.m; sourceTree = "<group>"; };
+		E71451E416B3A88B00C36F52 /* GMGestureRecognition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGestureRecognition.h; sourceTree = "<group>"; };
+		E71451E516B3A88B00C36F52 /* GMGestureRecognition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGestureRecognition.m; sourceTree = "<group>"; };
+		E71451E716B3A88B00C36F52 /* GMGestureRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGestureRecorder.h; sourceTree = "<group>"; };
+		E71451E816B3A88B00C36F52 /* GMGestureRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGestureRecorder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +121,7 @@
 		E714517A16B249A500C36F52 /* iOSGestureMotions */ = {
 			isa = PBXGroup;
 			children = (
-				E71451B616B2637D00C36F52 /* GestureMotions */,
+				E71451D416B3A88B00C36F52 /* GestureMotions */,
 				E714518316B249A500C36F52 /* GMAppDelegate.h */,
 				E714518416B249A500C36F52 /* GMAppDelegate.m */,
 				E714518C16B249A500C36F52 /* MainStoryboard_iPhone.storyboard */,
@@ -153,33 +153,73 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E71451B616B2637D00C36F52 /* GestureMotions */ = {
+		E71451D416B3A88B00C36F52 /* GestureMotions */ = {
 			isa = PBXGroup;
 			children = (
-				E71451B716B2637D00C36F52 /* DTWAlgorithm.h */,
-				E71451B816B2637D00C36F52 /* DTWAlgorithm.m */,
-				E71451B916B2637D00C36F52 /* Feature Extractors */,
-				E71451BC16B2637D00C36F52 /* GMGesture.h */,
-				E71451BD16B2637D00C36F52 /* GMGesture.m */,
-				E71451BE16B2637D00C36F52 /* GMGestureClassifier.h */,
-				E71451BF16B2637D00C36F52 /* GMGestureClassifier.m */,
-				E71451C416B2653C00C36F52 /* GMDistribution.h */,
-				E71451C516B2653C00C36F52 /* GMDistribution.m */,
-				E71451C716B2F5F200C36F52 /* GMGestureRecognition.h */,
-				E71451C816B2F5F200C36F52 /* GMGestureRecognition.m */,
-				E71451CA16B2F78900C36F52 /* GMGestureRecorder.h */,
-				E71451CB16B2F78900C36F52 /* GMGestureRecorder.m */,
+				E71451D516B3A88B00C36F52 /* Classifier */,
+				E71451D816B3A88B00C36F52 /* Distribution */,
+				E71451DB16B3A88B00C36F52 /* DTWAlgorithm */,
+				E71451DE16B3A88B00C36F52 /* Feature Extractors */,
+				E71451E116B3A88B00C36F52 /* Gesture */,
+				E71451E416B3A88B00C36F52 /* GMGestureRecognition.h */,
+				E71451E516B3A88B00C36F52 /* GMGestureRecognition.m */,
+				E71451E616B3A88B00C36F52 /* Recorder */,
 			);
 			path = GestureMotions;
 			sourceTree = "<group>";
 		};
-		E71451B916B2637D00C36F52 /* Feature Extractors */ = {
+		E71451D516B3A88B00C36F52 /* Classifier */ = {
 			isa = PBXGroup;
 			children = (
-				E71451BA16B2637D00C36F52 /* GMFeatureExtractor.h */,
-				E71451BB16B2637D00C36F52 /* GMFeatureExtractor.m */,
+				E71451D616B3A88B00C36F52 /* GMGestureClassifier.h */,
+				E71451D716B3A88B00C36F52 /* GMGestureClassifier.m */,
+			);
+			path = Classifier;
+			sourceTree = "<group>";
+		};
+		E71451D816B3A88B00C36F52 /* Distribution */ = {
+			isa = PBXGroup;
+			children = (
+				E71451D916B3A88B00C36F52 /* GMDistribution.h */,
+				E71451DA16B3A88B00C36F52 /* GMDistribution.m */,
+			);
+			path = Distribution;
+			sourceTree = "<group>";
+		};
+		E71451DB16B3A88B00C36F52 /* DTWAlgorithm */ = {
+			isa = PBXGroup;
+			children = (
+				E71451DC16B3A88B00C36F52 /* DTWAlgorithm.h */,
+				E71451DD16B3A88B00C36F52 /* DTWAlgorithm.m */,
+			);
+			path = DTWAlgorithm;
+			sourceTree = "<group>";
+		};
+		E71451DE16B3A88B00C36F52 /* Feature Extractors */ = {
+			isa = PBXGroup;
+			children = (
+				E71451DF16B3A88B00C36F52 /* GMFeatureExtractor.h */,
+				E71451E016B3A88B00C36F52 /* GMFeatureExtractor.m */,
 			);
 			path = "Feature Extractors";
+			sourceTree = "<group>";
+		};
+		E71451E116B3A88B00C36F52 /* Gesture */ = {
+			isa = PBXGroup;
+			children = (
+				E71451E216B3A88B00C36F52 /* GMGesture.h */,
+				E71451E316B3A88B00C36F52 /* GMGesture.m */,
+			);
+			path = Gesture;
+			sourceTree = "<group>";
+		};
+		E71451E616B3A88B00C36F52 /* Recorder */ = {
+			isa = PBXGroup;
+			children = (
+				E71451E716B3A88B00C36F52 /* GMGestureRecorder.h */,
+				E71451E816B3A88B00C36F52 /* GMGestureRecorder.m */,
+			);
+			path = Recorder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,13 +298,13 @@
 				E714518516B249A500C36F52 /* GMAppDelegate.m in Sources */,
 				E714519416B249A500C36F52 /* GMRecordViewController.m in Sources */,
 				E714519B16B249A500C36F52 /* GMRecognizeViewController.m in Sources */,
-				E71451C016B2637D00C36F52 /* DTWAlgorithm.m in Sources */,
-				E71451C116B2637D00C36F52 /* GMFeatureExtractor.m in Sources */,
-				E71451C216B2637D00C36F52 /* GMGesture.m in Sources */,
-				E71451C316B2637D00C36F52 /* GMGestureClassifier.m in Sources */,
-				E71451C616B2653C00C36F52 /* GMDistribution.m in Sources */,
-				E71451C916B2F5F300C36F52 /* GMGestureRecognition.m in Sources */,
-				E71451CC16B2F78A00C36F52 /* GMGestureRecorder.m in Sources */,
+				E71451E916B3A88B00C36F52 /* GMGestureClassifier.m in Sources */,
+				E71451EA16B3A88B00C36F52 /* GMDistribution.m in Sources */,
+				E71451EB16B3A88B00C36F52 /* DTWAlgorithm.m in Sources */,
+				E71451EC16B3A88B00C36F52 /* GMFeatureExtractor.m in Sources */,
+				E71451ED16B3A88B00C36F52 /* GMGesture.m in Sources */,
+				E71451EE16B3A88B00C36F52 /* GMGestureRecognition.m in Sources */,
+				E71451EF16B3A88B00C36F52 /* GMGestureRecorder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -114,7 +114,18 @@
     return labelExisted;
 }
 
-- (GMDistribution *)classifySignal:(NSString *)trainingSetName withGesture:(GMGesture *)signal {
+- (NSArray *)getLabels:(NSString *)trainingSetName {
+    [self loadTrainingSet:trainingSetName];
+    NSMutableArray *labels = [NSMutableArray array];
+    for (GMGesture *s in trainingSet) {
+        if (![labels containsObject:s.label]) {
+            [labels addObject:s.label];
+        }
+    }
+    return labels;
+}
+
+- (GMDistribution *)classifySignalInTrainingSet:(NSString *)trainingSetName withGesture:(GMGesture *)signal {
     if (trainingSetName == nil) {
         NSLog(@"No Training Set Name specified");
     }

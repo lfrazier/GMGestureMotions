@@ -27,6 +27,7 @@
 - (BOOL)checkForTrainingSet:(NSString *)trainingSetName;
 - (BOOL)deleteTrainingSet:(NSString *)trainingSetName;
 - (BOOL)deleteLabel:(NSString *)labelName inTrainingSet:(NSString *)trainingSetName;
-- (GMDistribution *)classifySignal:(NSString *)trainingSetName withGesture:(GMGesture *)signal;
+- (NSArray *)getLabels:(NSString *)trainingSetName;
+- (GMDistribution *)classifySignalInTrainingSet:(NSString *)trainingSetName withGesture:(GMGesture *)signal;
 
 @end

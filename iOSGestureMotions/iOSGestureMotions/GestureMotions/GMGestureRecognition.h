@@ -10,7 +10,15 @@
 #import "GMGestureClassifier.h"
 #import "GMGestureRecorder.h"
 
-@interface GMGestureRecognition : NSObject {
+@protocol GMGestureRecognitonDelegate <NSObject>
+
+- (void)trainingSetDeleted:(NSString *)trainingSetName;
+- (void)gestureLearned:(NSString *)gestureName;
+- (void)gestureRecognized:(GMDistribution *)distribution;
+
+@end
+
+@interface GMGestureRecognition : NSObject <GMGestureRecorderDelegate> {
     BOOL isLearning;
     BOOL isClassifying;
     GMGestureClassifier *classifier;
@@ -19,7 +27,10 @@
     NSString *activeLearnLabel;
 }
 
+@property (nonatomic, retain) id<GMGestureRecognitonDelegate> delegate;
+
 - (void)deleteTrainingSet:(NSString *)name;
+- (void)pushToGesture;
 - (void)startClassificationMode:(NSString *)trainingSetName;
 - (void)startLearnMode:(NSString *)trainingSetName forGesture:(NSString *)gestureName;
 - (void)stopLearnMode;
