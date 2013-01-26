@@ -14,17 +14,18 @@ Note: This object is meant to be a singleton, to prevent the iPhone gyroscope fr
 4. Implement the GMGestureRecognitionDelegate protocol in any class that will send/recieve feedback from the gesture recognizer.
 
 GMGestureRecognition provides the following methods:
-    - (void)deleteTrainingSet:(NSString *)name;
-    - (void)pushToGesture;
-    - (void)startClassificationMode:(NSString *)trainingSetName;
-    - (void)startLearnMode:(NSString *)trainingSetName forGesture:(NSString *)gestureName;
-    - (void)stopLearnMode;
-    - (NSArray *)getGestureList:(NSString *)trainingSetName;
-    - (void)stopClassificationMode;
-    - (void)deleteGestureInSet:(NSString *)trainingSetName withName:(NSString *)gestureName;
-    - (BOOL)isLearning;
-    - (BOOL)isClassifying;
-    - (void)setThreshold:(float)threshold;
-    - (void)gestureRecorded:(NSArray *)values;
+
+	- (void)deleteTrainingSet:(NSString *)name;
+	- (void)pushToGesture;
+	- (void)startClassificationMode:(NSString *)trainingSetName;
+	- (void)startLearnMode:(NSString *)trainingSetName forGesture:(NSString *)gestureName;
+	- (void)stopLearnMode;
+	- (NSArray *)getGestureList:(NSString *)trainingSetName;
+	- (void)stopClassificationMode;
+	- (void)deleteGestureInSet:(NSString *)trainingSetName withName:(NSString *)gestureName;
+	- (BOOL)isLearning;
+	- (BOOL)isClassifying;
+	- (void)setThreshold:(float)threshold;
+	- (void)gestureRecorded:(NSArray *)values;
 
 Please see the demo app for more details. The demo app simply allows users to name and define gestures in one tab, then perform them in the other tab.
