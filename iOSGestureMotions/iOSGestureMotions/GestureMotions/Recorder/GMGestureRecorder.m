@@ -17,7 +17,7 @@
         MIN_GESTURE_SIZE = 8;
         THRESHOLD = 2;
         recordMode = MOTION_DETECTION;
-        deviceUpdateInterval = 0.05;
+        deviceUpdateInterval = 0.01;
         noMotionLimit = 10;
     }
     return self;
@@ -63,7 +63,7 @@
 }
 
 - (void)handleDeviceUpdate:(CMDeviceMotion *)motion {
-    NSLog(@"X: %f, Y: %f, Z:%f", motion.userAcceleration.x, motion.userAcceleration.y, motion.userAcceleration.z);
+    //NSLog(@"X: %f, Y: %f, Z:%f", motion.userAcceleration.x, motion.userAcceleration.y, motion.userAcceleration.z);
     NSArray *value = @[[NSNumber numberWithDouble:motion.userAcceleration.x], [NSNumber numberWithDouble:motion.userAcceleration.y], [NSNumber numberWithDouble:motion.userAcceleration.z]];
     switch (recordMode) {
         case MOTION_DETECTION:

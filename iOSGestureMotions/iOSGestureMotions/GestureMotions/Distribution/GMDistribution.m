@@ -13,6 +13,7 @@
 - (id)init {
     if (self = [super init]) {
         distribution = [NSMutableDictionary dictionary];
+        minDistance = DBL_MAX;
     }
     return self;
 }

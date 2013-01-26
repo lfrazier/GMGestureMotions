@@ -18,7 +18,29 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    gestureRecognizer = ((GMAppDelegate *)[[UIApplication sharedApplication] delegate]).gestureRecognition;
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+    gestureRecognizer.delegate = self;
+    [gestureRecognizer startClassificationMode:@"Default"];
+}
+
+
+- (void)trainingSetDeleted:(NSString *)trainingSetName {
+    
+}
+
+- (void)gestureLearned:(NSString *)gestureName {
+    NSLog(gestureName);
+}
+
+
+- (void)gestureRecognized:(GMDistribution *)distribution {
+    NSLog(@"%@: %f",[distribution getBestMatch], [distribution getBestDistance]);
+    [label setText:[NSString stringWithFormat:@"%@:\n%f",[distribution getBestMatch], [distribution getBestDistance]]];
+}
+
 
 - (void)didReceiveMemoryWarning
 {

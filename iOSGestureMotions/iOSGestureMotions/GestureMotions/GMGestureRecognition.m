@@ -14,7 +14,10 @@
 
 - (id)init {
     if (self = [super init]) {
-        
+        // Fix me! Change to specific Feature Extractor
+        classifier = [[GMGestureClassifier alloc] initWithFeatureExtractor:[[GMFeatureExtractor alloc] init]];
+        recorder = [[GMGestureRecorder alloc] init];
+        recorder.delegate = self;
     }
     return self;
 }
@@ -32,6 +35,7 @@
 - (void)startClassificationMode:(NSString *)trainingSetName {
     activeTrainingSet = trainingSetName;
     isClassifying = YES;
+    [recorder setRecordMode:MOTION_DETECTION];
     [recorder start];
     [classifier loadTrainingSet:trainingSetName];
 }
@@ -40,9 +44,15 @@
     activeTrainingSet = trainingSetName;
     activeLearnLabel = gestureName;
     isLearning = YES;
+    [recorder setRecordMode:PUSH_TO_GESTURE];
+    [recorder pushToGesture:YES];
+    [recorder start];
 }
 
 - (void)stopLearnMode {
+    [recorder pushToGesture:NO];
+    [recorder setRecordMode:MOTION_DETECTION];
+    [recorder stop];
     isLearning = NO;
 }
 

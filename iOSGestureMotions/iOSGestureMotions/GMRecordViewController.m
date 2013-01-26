@@ -18,8 +18,46 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    GMGestureRecorder *recorder = [[GMGestureRecorder alloc] init];
-    [recorder start];
+    gestureRecognizer = ((GMAppDelegate *)[[UIApplication sharedApplication] delegate]).gestureRecognition;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    gestureRecognizer.delegate = self;
+}
+
+
+- (IBAction)buttonPressed:(UIButton *)sender {
+    if ([[trainingSetTextField text] isEqualToString:@""] || [[gestureTextField text] isEqualToString:@""]) {
+        [[[UIAlertView alloc] initWithTitle:@"Cannot Leave Blank" message:@"Oops! Looks like you left a field blank. Fill it in!" delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil] show];
+        return;
+    }
+    
+    if ([gestureRecognizer isLearning]) {
+        [gestureRecognizer stopLearnMode];
+        [sender setTitle:@"Record" forState:UIControlStateNormal];
+    } else {
+        [gestureRecognizer startLearnMode:[trainingSetTextField text] forGesture:[gestureTextField text]];
+        [sender setTitle:@"Stop" forState:UIControlStateNormal];
+    }
+}
+
+
+- (void)trainingSetDeleted:(NSString *)trainingSetName {
+    
+}
+
+- (void)gestureLearned:(NSString *)gestureName {
+    NSLog(gestureName);
+}
+
+
+- (void)gestureRecognized:(GMDistribution *)distribution {
+    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
 }
 
 - (void)didReceiveMemoryWarning

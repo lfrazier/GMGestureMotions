@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GMAppDelegate.h"
 
-@interface GMRecognizeViewController : UIViewController
+@interface GMRecognizeViewController : UIViewController <GMGestureRecognitonDelegate> {
+    GMGestureRecognition *gestureRecognizer;
+    IBOutlet UILabel *label;
+}
 
 @end

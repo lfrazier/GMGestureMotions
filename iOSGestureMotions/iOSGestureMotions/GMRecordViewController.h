@@ -7,8 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GMGestureRecorder.h"
+#import "GMAppDelegate.h"
 
-@interface GMRecordViewController : UIViewController
+@interface GMRecordViewController : UIViewController <GMGestureRecognitonDelegate, UITextFieldDelegate> {
+    IBOutlet UITextField *trainingSetTextField;
+    IBOutlet UITextField *gestureTextField;
+    
+    GMGestureRecognition *gestureRecognizer;
+}
+
+- (IBAction)buttonPressed:(UIButton *)sender;
 
 @end

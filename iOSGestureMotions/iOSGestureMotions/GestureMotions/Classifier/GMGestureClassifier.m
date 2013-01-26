@@ -26,13 +26,16 @@
         NSString *error;
         NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
         NSString *plistPath = [rootPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.plist", activeTrainingSet]];
-        NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:trainingSet format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
+        NSArray *temp = [NSArray arrayWithArray:trainingSet];
+        [temp writeToFile:plistPath atomically:YES];
+        /*NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:temp format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
         if(plistData) {
             [plistData writeToFile:plistPath atomically:YES];
         }
         else {
             NSLog(@"Error : %@",error);
         }
+         */
         return YES;
     } else {
         return NO;
@@ -53,16 +56,15 @@
         NSString *plistPath;
         NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
         plistPath = [rootPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.plist", activeTrainingSet]];
-        if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
-            plistPath = [[NSBundle mainBundle] pathForResource:activeTrainingSet ofType:@"plist"];
-        }
-        NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
-        NSMutableArray *temp = (NSMutableArray *)[NSPropertyListSerialization
-                                              propertyListWithData:plistXML options:NSPropertyListMutableContainersAndLeaves format:nil error:&error];
-        if (!temp) {
-            NSLog(@"Error reading plist: %@", error);
-        } else {
-            trainingSet = temp;
+        if ([[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
+            NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
+            NSMutableArray *temp = (NSMutableArray *)[NSPropertyListSerialization
+                                                      propertyListWithData:plistXML options:NSPropertyListMutableContainersAndLeaves format:nil error:&error];
+            if (!temp) {
+                NSLog(@"Error reading plist: %@", error);
+            } else {
+                trainingSet = temp;
+            }
         }
     }
 }
