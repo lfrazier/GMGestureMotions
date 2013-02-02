@@ -32,6 +32,7 @@
 		E71451ED16B3A88B00C36F52 /* GMGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451E316B3A88B00C36F52 /* GMGesture.m */; };
 		E71451EE16B3A88B00C36F52 /* GMGestureRecognition.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451E516B3A88B00C36F52 /* GMGestureRecognition.m */; };
 		E71451EF16B3A88B00C36F52 /* GMGestureRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451E816B3A88B00C36F52 /* GMGestureRecorder.m */; };
+		E77EAFBC16BD8DF500DE49F4 /* GMNormExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = E77EAFBB16BD8DF500DE49F4 /* GMNormExtractor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,8 @@
 		E71451E516B3A88B00C36F52 /* GMGestureRecognition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGestureRecognition.m; sourceTree = "<group>"; };
 		E71451E716B3A88B00C36F52 /* GMGestureRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGestureRecorder.h; sourceTree = "<group>"; };
 		E71451E816B3A88B00C36F52 /* GMGestureRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGestureRecorder.m; sourceTree = "<group>"; };
+		E77EAFBA16BD8DF500DE49F4 /* GMNormExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMNormExtractor.h; sourceTree = "<group>"; };
+		E77EAFBB16BD8DF500DE49F4 /* GMNormExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMNormExtractor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +203,8 @@
 			children = (
 				E71451DF16B3A88B00C36F52 /* GMFeatureExtractor.h */,
 				E71451E016B3A88B00C36F52 /* GMFeatureExtractor.m */,
+				E77EAFBA16BD8DF500DE49F4 /* GMNormExtractor.h */,
+				E77EAFBB16BD8DF500DE49F4 /* GMNormExtractor.m */,
 			);
 			path = "Feature Extractors";
 			sourceTree = "<group>";
@@ -305,6 +310,7 @@
 				E71451ED16B3A88B00C36F52 /* GMGesture.m in Sources */,
 				E71451EE16B3A88B00C36F52 /* GMGestureRecognition.m in Sources */,
 				E71451EF16B3A88B00C36F52 /* GMGestureRecorder.m in Sources */,
+				E77EAFBC16BD8DF500DE49F4 /* GMNormExtractor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
