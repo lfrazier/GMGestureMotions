@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "GMGestureClassifier.h"
 #import "GMGestureRecorder.h"
+#import "GMNormedGridExtractor.h"
 
 @protocol GMGestureRecognitonDelegate <NSObject>
 

@@ -7,7 +7,6 @@
 //
 
 #import "GMGestureRecognition.h"
-#import "GMNormExtractor.h"
 
 @implementation GMGestureRecognition
 
@@ -16,7 +15,7 @@
 - (id)init {
     if (self = [super init]) {
         // Fix me! Change to specific Feature Extractor
-        classifier = [[GMGestureClassifier alloc] initWithFeatureExtractor:[[GMNormExtractor alloc] init]];
+        classifier = [[GMGestureClassifier alloc] initWithFeatureExtractor:[[GMNormedGridExtractor alloc] init]];
         recorder = [[GMGestureRecorder alloc] init];
         recorder.delegate = self;
     }

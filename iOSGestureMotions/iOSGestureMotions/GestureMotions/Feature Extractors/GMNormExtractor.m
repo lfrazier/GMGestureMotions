@@ -30,7 +30,7 @@
     for (int i = 0; i < [signal length]; ++i) {
         [sampledValues addObject:[NSMutableArray arrayWithCapacity:3]];
         for (int j = 0; j < 3; ++j) {
-            [sampledSignal setValueAtIndex:i dimension:j value:[signal getValueAtIndex:i dimension:j]];
+            [sampledSignal setValueAtIndex:i dimension:j value:([signal getValueAtIndex:i dimension:j] - min) / (max - min)];
         }
     }
     return sampledSignal;

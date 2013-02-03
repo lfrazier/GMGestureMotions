@@ -14,6 +14,8 @@
 
 @implementation GMRecognizeViewController
 
+#define MAX_DISTANCE 100.0
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -47,7 +49,9 @@
 
 - (void)gestureRecognized:(GMDistribution *)distribution {
     NSLog(@"%@: %f",[distribution getBestMatch], [distribution getBestDistance]);
-    [label setText:[NSString stringWithFormat:@"%@:\n%f",[distribution getBestMatch], [distribution getBestDistance]]];
+    if ([distribution getBestDistance] < MAX_DISTANCE) {
+        [label setText:[NSString stringWithFormat:@"%@:\n%f",[distribution getBestMatch], [distribution getBestDistance]]];
+    }
 }
 
 
