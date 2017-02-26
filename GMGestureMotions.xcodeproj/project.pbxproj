@@ -38,14 +38,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E714517016B249A500C36F52 /* iOSGestureMotions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSGestureMotions.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E714517016B249A500C36F52 /* GMGestureMotions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMGestureMotions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E714517416B249A500C36F52 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E714517616B249A500C36F52 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E714517816B249A500C36F52 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		E714517C16B249A500C36F52 /* iOSGestureMotions-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSGestureMotions-Info.plist"; sourceTree = "<group>"; };
+		E714517C16B249A500C36F52 /* GMGestureMotions-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GMGestureMotions-Info.plist"; sourceTree = "<group>"; };
 		E714517E16B249A500C36F52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E714518016B249A500C36F52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E714518216B249A500C36F52 /* iOSGestureMotions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSGestureMotions-Prefix.pch"; sourceTree = "<group>"; };
+		E714518216B249A500C36F52 /* GMGestureMotions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GMGestureMotions-Prefix.pch"; sourceTree = "<group>"; };
 		E714518316B249A500C36F52 /* GMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMAppDelegate.h; sourceTree = "<group>"; };
 		E714518416B249A500C36F52 /* GMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMAppDelegate.m; sourceTree = "<group>"; };
 		E714518616B249A500C36F52 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 		E714517116B249A500C36F52 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E714517016B249A500C36F52 /* iOSGestureMotions.app */,
+				E714517016B249A500C36F52 /* GMGestureMotions.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,10 +151,10 @@
 		E714517B16B249A500C36F52 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E714517C16B249A500C36F52 /* iOSGestureMotions-Info.plist */,
+				E714517C16B249A500C36F52 /* GMGestureMotions-Info.plist */,
 				E714517D16B249A500C36F52 /* InfoPlist.strings */,
 				E714518016B249A500C36F52 /* main.m */,
-				E714518216B249A500C36F52 /* iOSGestureMotions-Prefix.pch */,
+				E714518216B249A500C36F52 /* GMGestureMotions-Prefix.pch */,
 				E714518616B249A500C36F52 /* Default.png */,
 				E714518816B249A500C36F52 /* Default@2x.png */,
 				E714518A16B249A500C36F52 /* Default-568h@2x.png */,
@@ -240,9 +240,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E714516F16B249A500C36F52 /* iOSGestureMotions */ = {
+		E714516F16B249A500C36F52 /* GMGestureMotions */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E71451A216B249A500C36F52 /* Build configuration list for PBXNativeTarget "iOSGestureMotions" */;
+			buildConfigurationList = E71451A216B249A500C36F52 /* Build configuration list for PBXNativeTarget "GMGestureMotions" */;
 			buildPhases = (
 				E714516C16B249A500C36F52 /* Sources */,
 				E714516D16B249A500C36F52 /* Frameworks */,
@@ -252,9 +252,9 @@
 			);
 			dependencies = (
 			);
-			name = iOSGestureMotions;
+			name = GMGestureMotions;
 			productName = iOSGestureMotions;
-			productReference = E714517016B249A500C36F52 /* iOSGestureMotions.app */;
+			productReference = E714517016B249A500C36F52 /* GMGestureMotions.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -267,7 +267,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Lauren Frazier";
 			};
-			buildConfigurationList = E714516A16B249A400C36F52 /* Build configuration list for PBXProject "iOSGestureMotions" */;
+			buildConfigurationList = E714516A16B249A400C36F52 /* Build configuration list for PBXProject "GMGestureMotions" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -279,7 +279,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E714516F16B249A500C36F52 /* iOSGestureMotions */,
+				E714516F16B249A500C36F52 /* GMGestureMotions */,
 			);
 		};
 /* End PBXProject section */
@@ -419,8 +419,8 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iOSGestureMotions/iOSGestureMotions-Prefix.pch";
-				INFOPLIST_FILE = "iOSGestureMotions/iOSGestureMotions-Info.plist";
+				GCC_PREFIX_HEADER = "iOSGestureMotions/GMGestureMotions-Prefix.pch";
+				INFOPLIST_FILE = "iOSGestureMotions/GMGestureMotions-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -431,8 +431,8 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iOSGestureMotions/iOSGestureMotions-Prefix.pch";
-				INFOPLIST_FILE = "iOSGestureMotions/iOSGestureMotions-Info.plist";
+				GCC_PREFIX_HEADER = "iOSGestureMotions/GMGestureMotions-Prefix.pch";
+				INFOPLIST_FILE = "iOSGestureMotions/GMGestureMotions-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -441,7 +441,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E714516A16B249A400C36F52 /* Build configuration list for PBXProject "iOSGestureMotions" */ = {
+		E714516A16B249A400C36F52 /* Build configuration list for PBXProject "GMGestureMotions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E71451A016B249A500C36F52 /* Debug */,
@@ -450,7 +450,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E71451A216B249A500C36F52 /* Build configuration list for PBXNativeTarget "iOSGestureMotions" */ = {
+		E71451A216B249A500C36F52 /* Build configuration list for PBXNativeTarget "GMGestureMotions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E71451A316B249A500C36F52 /* Debug */,
