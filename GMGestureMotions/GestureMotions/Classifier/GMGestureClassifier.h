@@ -6,7 +6,7 @@
 //  Copyright (c) 2017 Lauren Frazier. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import "GMFeatureExtractor.h"
 #import "DTWAlgorithm.h"
 #import "GMDistribution.h"

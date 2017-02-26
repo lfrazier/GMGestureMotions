@@ -6,19 +6,28 @@
 //  Copyright (c) 2017 Lauren Frazier. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
-@interface GMGesture : NSObject {
-    NSString *label;
-    NSArray *values;
-}
+/// Represents a single gesture. A gesture has a name and a set of values along each dimension
+/// (x, y, and z).
+@interface GMGesture : NSObject
 
-@property (nonatomic, retain) NSString *label;
-@property (nonatomic, retain) NSArray *values;
+/// The name of the gesture.
+@property (nonatomic, copy) NSString *label;
 
-- (id)initWithValues:(NSArray *)vals andLabel:(NSString *)labelString;
-- (void)setValueAtIndex:(int)index dimension:(int)dim value:(float)val;
-- (float)getValueAtIndex:(int)index dimension:(int)dim;
-- (int)length;
+/// The values of this gesture. Two-dimensional array that contains values for x, y, and z.
+@property (nonatomic) NSArray *values;
+
+/// Creates a gesture with the given \a values and name.
+- (id)initWithValues:(NSArray *)values andLabel:(NSString *)labelString;
+
+/// Sets the \a value at the given \a index for the given \a dimension.
+- (void)setValueAtIndex:(NSUInteger)index dimension:(NSUInteger)dimension value:(float)value;
+
+/// Gets the value at the given \a index and \a dimension.
+- (float)getValueAtIndex:(NSUInteger)index dimension:(NSUInteger)dimension;
+
+/// The length of the gesture.
+- (NSUInteger)length;
 
 @end

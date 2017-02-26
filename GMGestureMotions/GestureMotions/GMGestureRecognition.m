@@ -8,7 +8,7 @@
 
 #import "GMGestureRecognition.h"
 
-@interface GMGestureRecognition() <GMGestureRecorderDelegate> {
+@interface GMGestureRecognition ()<GMGestureRecorderDelegate> {
   BOOL _isLearning;
   BOOL _isClassifying;
   GMGestureClassifier *_classifier;
@@ -59,8 +59,8 @@
   _isLearning = NO;
 }
 
-- (NSArray<NSString *> *)getGestureList:(NSString *)trainingSetName {
-  return [_classifier getLabels:trainingSetName];
+- (NSArray<NSString *> *)getGestureListForTrainingSet:(NSString *)trainingSet {
+  return [_classifier getLabels:trainingSet];
 }
 
 - (void)startClassificationModeWithTrainingSet:(NSString *)trainingSet {

@@ -10,27 +10,25 @@
 
 @implementation GMGesture
 
-@synthesize label, values;
-
-- (id)initWithValues:(NSArray *)vals andLabel:(NSString *)labelString {
-    if ( self = [super init] ) {
-        values = vals;
-        label = labelString;
+- (id)initWithValues:(NSArray *)values andLabel:(NSString *)labelString {
+    if (self = [super init] ) {
+        _values = values;
+        _label = labelString;
     }
     return self;
 }
 
-- (void)setValueAtIndex:(int)index dimension:(int)dim value:(float)val {
-    [[values objectAtIndex:index] setObject:[NSNumber numberWithFloat:val] atIndex:dim];
+- (void)setValueAtIndex:(NSUInteger)index dimension:(NSUInteger)dimension value:(float)value {
+  _values[index][dimension] = @(value);
 }
 
-- (float)getValueAtIndex:(int)index dimension:(int)dim {
-    NSNumber *value = [[values objectAtIndex:index] objectAtIndex:dim];
-    return [value floatValue];
+- (float)getValueAtIndex:(NSUInteger)index dimension:(NSUInteger)dimension {
+  NSNumber *value = _values[index][dimension];
+  return [value floatValue];
 }
 
-- (int)length {
-    return [values count];
+- (NSUInteger)length {
+  return [_values count];
 }
 
 @end
