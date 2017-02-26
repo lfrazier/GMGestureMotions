@@ -116,7 +116,7 @@
     return labelExisted;
 }
 
-- (NSArray *)getLabels:(NSString *)trainingSetName {
+- (NSArray<NSString *> *)getLabels:(NSString *)trainingSetName {
     [self loadTrainingSet:trainingSetName];
     NSMutableArray *labels = [NSMutableArray array];
     for (GMGesture *s in trainingSet) {

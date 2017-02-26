@@ -8,94 +8,115 @@
 
 #import "GMGestureRecognition.h"
 
+@interface GMGestureRecognition() <GMGestureRecorderDelegate> {
+  BOOL _isLearning;
+  BOOL _isClassifying;
+  GMGestureClassifier *_classifier;
+  GMGestureRecorder *_recorder;
+  NSString *_activeTrainingSet;
+  NSString *_activeLearnLabel;
+}
+
+@end
+
 @implementation GMGestureRecognition
 
-@synthesize delegate;
++ (GMGestureRecognition *)sharedInstance {
+  static GMGestureRecognition *_sharedInstance = nil;
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    _sharedInstance = [[GMGestureRecognition alloc] init];
+  });
+  return _sharedInstance;
+}
 
 - (id)init {
-    if (self = [super init]) {
-        // Fix me! Change to specific Feature Extractor
-        classifier = [[GMGestureClassifier alloc] initWithFeatureExtractor:[[GMNormedGridExtractor alloc] init]];
-        recorder = [[GMGestureRecorder alloc] init];
-        recorder.delegate = self;
-    }
-    return self;
+  if (self = [super init]) {
+    // Fix me! Change to specific Feature Extractor
+    GMNormedGridExtractor *featureExtractor = [[GMNormedGridExtractor alloc] init];
+    _classifier = [[GMGestureClassifier alloc] initWithFeatureExtractor:featureExtractor];
+    _recorder = [[GMGestureRecorder alloc] init];
+    _recorder.delegate = self;
+  }
+  return self;
 }
 
-- (void)deleteTrainingSet:(NSString *)name {
-    if ([classifier deleteTrainingSet:name]) {
-        [delegate trainingSetDeleted:name];
-    }
-}
-
-- (void)pushToGesture {
-    [recorder pushToGesture:YES];
-}
-
-- (void)startClassificationMode:(NSString *)trainingSetName {
-    activeTrainingSet = trainingSetName;
-    isClassifying = YES;
-    [recorder setRecordMode:MOTION_DETECTION];
-    [recorder start];
-    [classifier loadTrainingSet:trainingSetName];
-}
+#pragma mark - Public
 
 - (void)startLearnMode:(NSString *)trainingSetName forGesture:(NSString *)gestureName {
-    activeTrainingSet = trainingSetName;
-    activeLearnLabel = gestureName;
-    isLearning = YES;
-    [recorder setRecordMode:PUSH_TO_GESTURE];
-    [recorder pushToGesture:YES];
-    [recorder start];
+  _activeTrainingSet = trainingSetName;
+  _activeLearnLabel = gestureName;
+  _isLearning = YES;
+  [_recorder setRecordMode:PUSH_TO_GESTURE];
+  [_recorder pushToGesture:YES];
+  [_recorder start];
 }
 
 - (void)stopLearnMode {
-    [recorder pushToGesture:NO];
-    [recorder setRecordMode:MOTION_DETECTION];
-    [recorder stop];
-    isLearning = NO;
+  [_recorder pushToGesture:NO];
+  [_recorder setRecordMode:MOTION_DETECTION];
+  [_recorder stop];
+  _isLearning = NO;
 }
 
-- (NSArray *)getGestureList:(NSString *)trainingSetName {
-    return [classifier getLabels:trainingSetName];
+- (NSArray<NSString *> *)getGestureList:(NSString *)trainingSetName {
+  return [_classifier getLabels:trainingSetName];
+}
+
+- (void)startClassificationModeWithTrainingSet:(NSString *)trainingSet {
+  _activeTrainingSet = trainingSet;
+  _isClassifying = YES;
+  [_recorder setRecordMode:MOTION_DETECTION];
+  [_recorder start];
+  [_classifier loadTrainingSet:trainingSet];
 }
 
 - (void)stopClassificationMode {
-    isClassifying = NO;
-    [recorder stop];
+  _isClassifying = NO;
+  [_recorder stop];
 }
 
-- (void)deleteGestureInSet:(NSString *)trainingSetName withName:(NSString *)gestureName {
-    [classifier deleteLabel:gestureName inTrainingSet:trainingSetName];
-    [classifier commitData];
+- (void)deleteGesture:(NSString *)gestureName fromTrainingSet:(NSString *)trainingSetName {
+  [_classifier deleteLabel:gestureName inTrainingSet:trainingSetName];
+  [_classifier commitData];
+}
+
+- (void)deleteTrainingSet:(NSString *)name {
+  if ([_classifier deleteTrainingSet:name]) {
+    [self.delegate trainingSetDeleted:name];
+  }
 }
 
 - (BOOL)isLearning {
-    return isLearning;
+  return _isLearning;
 }
 
 - (BOOL)isClassifying {
-    return isClassifying;
+  return _isClassifying;
 }
 
 - (void)setThreshold:(float)threshold {
-    [recorder setThreshold:threshold];
+  [_recorder setThreshold:threshold];
 }
 
+#pragma mark - Protocols
+
+#pragma mark GMGestureRecorderDelegate
+
 - (void)gestureRecorded:(NSArray *)values {
-    if (isLearning) {
-        [classifier trainData:[[GMGesture alloc] initWithValues:values andLabel:activeLearnLabel] inTrainingSet:activeTrainingSet];
-        [classifier commitData];
-        [delegate gestureLearned:activeLearnLabel];
-        NSLog(@"Trained");
-    } else if (isClassifying) {
-        [recorder pause:YES];
-        GMDistribution *distribution = [classifier classifySignalInTrainingSet:activeTrainingSet withGesture:[[GMGesture alloc] initWithValues:values andLabel:nil]];
-        [recorder pause:NO];
-        if (distribution != nil && [distribution size] > 0) {
-            [delegate gestureRecognized:distribution];
-        }
+  if (_isLearning) {
+    [_classifier trainData:[[GMGesture alloc] initWithValues:values andLabel:_activeLearnLabel] inTrainingSet:_activeTrainingSet];
+    [_classifier commitData];
+    [self.delegate gestureLearned:_activeLearnLabel];
+    NSLog(@"Trained");
+  } else if (_isClassifying) {
+    [_recorder pause:YES];
+    GMDistribution *distribution = [_classifier classifySignalInTrainingSet:_activeTrainingSet withGesture:[[GMGesture alloc] initWithValues:values andLabel:nil]];
+    [_recorder pause:NO];
+    if (distribution != nil && [distribution size] > 0) {
+      [self.delegate gestureRecognized:distribution];
     }
+  }
 }
 
 @end

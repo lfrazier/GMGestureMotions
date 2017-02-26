@@ -15,7 +15,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    gestureRecognition = [[GMGestureRecognition alloc] init];
+    gestureRecognition = [GMGestureRecognition sharedInstance];
     return YES;
 }
 							
