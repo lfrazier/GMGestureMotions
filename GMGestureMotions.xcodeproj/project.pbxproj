@@ -102,7 +102,7 @@
 		E714516516B249A400C36F52 = {
 			isa = PBXGroup;
 			children = (
-				E714517A16B249A500C36F52 /* iOSGestureMotions */,
+				E714517A16B249A500C36F52 /* GMGestureMotions */,
 				E714517316B249A500C36F52 /* Frameworks */,
 				E714517116B249A500C36F52 /* Products */,
 			);
@@ -127,7 +127,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E714517A16B249A500C36F52 /* iOSGestureMotions */ = {
+		E714517A16B249A500C36F52 /* GMGestureMotions */ = {
 			isa = PBXGroup;
 			children = (
 				E71451D416B3A88B00C36F52 /* GestureMotions */,
@@ -145,7 +145,7 @@
 				E714519E16B249A500C36F52 /* second@2x.png */,
 				E714517B16B249A500C36F52 /* Supporting Files */,
 			);
-			path = iOSGestureMotions;
+			path = GMGestureMotions;
 			sourceTree = "<group>";
 		};
 		E714517B16B249A500C36F52 /* Supporting Files */ = {
@@ -419,8 +419,8 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iOSGestureMotions/GMGestureMotions-Prefix.pch";
-				INFOPLIST_FILE = "iOSGestureMotions/GMGestureMotions-Info.plist";
+				GCC_PREFIX_HEADER = "GMGestureMotions/GMGestureMotions-Prefix.pch";
+				INFOPLIST_FILE = "GMGestureMotions/GMGestureMotions-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -431,8 +431,8 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iOSGestureMotions/GMGestureMotions-Prefix.pch";
-				INFOPLIST_FILE = "iOSGestureMotions/GMGestureMotions-Info.plist";
+				GCC_PREFIX_HEADER = "GMGestureMotions/GMGestureMotions-Prefix.pch";
+				INFOPLIST_FILE = "GMGestureMotions/GMGestureMotions-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
