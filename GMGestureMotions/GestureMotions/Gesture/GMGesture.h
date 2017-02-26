@@ -13,10 +13,10 @@
 @interface GMGesture : NSObject
 
 /// The name of the gesture.
-@property (nonatomic, copy) NSString *label;
+@property(nonatomic, copy) NSString *label;
 
 /// The values of this gesture. Two-dimensional array that contains values for x, y, and z.
-@property (nonatomic) NSArray *values;
+@property(nonatomic) NSArray *values;
 
 /// Creates a gesture with the given \a values and name.
 - (id)initWithValues:(NSArray *)values andLabel:(NSString *)labelString;

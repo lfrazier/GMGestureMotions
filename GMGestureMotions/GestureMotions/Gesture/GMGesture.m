@@ -11,11 +11,11 @@
 @implementation GMGesture
 
 - (id)initWithValues:(NSArray *)values andLabel:(NSString *)labelString {
-    if (self = [super init] ) {
-        _values = values;
-        _label = labelString;
-    }
-    return self;
+  if (self = [super init] ) {
+    _values = values;
+    _label = labelString;
+  }
+  return self;
 }
 
 - (void)setValueAtIndex:(NSUInteger)index dimension:(NSUInteger)dimension value:(float)value {

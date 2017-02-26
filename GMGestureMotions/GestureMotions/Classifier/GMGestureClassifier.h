@@ -11,23 +11,39 @@
 #import "DTWAlgorithm.h"
 #import "GMDistribution.h"
 
-@interface GMGestureClassifier : NSObject {
-    GMFeatureExtractor *featureExtractor;
-    NSMutableArray *trainingSet;
-    NSString *activeTrainingSet;
-}
+/// Classifies gestures using a feature extractor.
+@interface GMGestureClassifier : NSObject
 
-@property (nonatomic, retain) GMFeatureExtractor *featureExtractor;
+@property(nonatomic) GMFeatureExtractor *featureExtractor;
 
-- (id)initWithFeatureExtractor:(GMFeatureExtractor *)fE;
+- (id)initWithFeatureExtractor:(GMFeatureExtractor *)featureExtractor;
+
+/// Writes data to a plist.
 - (BOOL)commitData;
+
+/// Adds the given \a signal to the training set.
 - (BOOL)trainData:(GMGesture *)signal inTrainingSet:(NSString *)trainingSetName;
+
+/// Loads the given training set from disk.
 - (void)loadTrainingSet:(NSString *)trainingSetName;
+
+/// True if the given \a label exists in the given training set.
 - (BOOL)checkForLabel:(NSString *)label inTrainingSet:(NSString *)trainingSetName;
+
+/// True if there is a training set by the given \a trainingSetName.
 - (BOOL)checkForTrainingSet:(NSString *)trainingSetName;
+
+/// Deletes the training set with the given \a trainingSetName. True if deletion was successful.
 - (BOOL)deleteTrainingSet:(NSString *)trainingSetName;
+
+/// Deletes the given \a labelName from the training set. True if deletion was successful.
 - (BOOL)deleteLabel:(NSString *)labelName inTrainingSet:(NSString *)trainingSetName;
+
+/// Gets all the labels in the training set.
 - (NSArray<NSString *> *)getLabels:(NSString *)trainingSetName;
-- (GMDistribution *)classifySignalInTrainingSet:(NSString *)trainingSetName withGesture:(GMGesture *)signal;
+
+/// Calculates a \c GMDistribution for the given \a signal in the training set.
+- (GMDistribution *)classifySignalInTrainingSet:(NSString *)trainingSetName
+                                    withGesture:(GMGesture *)signal;
 
 @end

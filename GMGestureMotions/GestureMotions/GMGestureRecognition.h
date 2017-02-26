@@ -30,8 +30,11 @@
 
 /// GMGestureRecognition handles recording and classifying gestures based on the phone's
 /// accelerometer and gyroscope. There are two modes, learn mode and classification mode.
-/// Learn mode
+/// Learn mode records motions and saves them to a training set (which can be persisted on disk as a
+/// plist), while classification mode
 @interface GMGestureRecognition : NSObject 
+
+@property(nonatomic, weak) id<GMGestureRecognitonDelegate> delegate;
 
 + (GMGestureRecognition *)sharedInstance;
 
@@ -65,7 +68,5 @@
 /// Sets the \a threshold for recognition. The higher the threshold, the more strict the
 /// classifier will be.
 - (void)setThreshold:(float)threshold;
-
-@property (nonatomic, weak) id<GMGestureRecognitonDelegate> delegate;
 
 @end
