@@ -8,6 +8,7 @@
 
 #import "GMFeatureExtractor.h"
 
-@interface GMGridExtractor : GMFeatureExtractor
+/// Pares the original signal down to a fixed number of steps.
+@interface GMGridExtractor : NSObject<GMFeatureExtractor>
 
 @end

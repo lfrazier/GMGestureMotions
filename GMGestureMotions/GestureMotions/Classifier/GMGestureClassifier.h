@@ -15,9 +15,9 @@
 /// Classifies gestures using a feature extractor.
 @interface GMGestureClassifier : NSObject
 
-@property(nonatomic) GMFeatureExtractor *featureExtractor;
+@property(nonatomic) id<GMFeatureExtractor> featureExtractor;
 
-- (id)initWithFeatureExtractor:(GMFeatureExtractor *)featureExtractor;
+- (id)initWithFeatureExtractor:(id<GMFeatureExtractor>)featureExtractor;
 
 /// Writes data to a plist.
 - (BOOL)commitData;

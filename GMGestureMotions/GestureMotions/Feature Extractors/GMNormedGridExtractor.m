@@ -11,8 +11,9 @@
 @implementation GMNormedGridExtractor
 
 - (GMGesture *)sampleSignal:(GMGesture *)signal {
-    GMGesture *s = [[[GMGridExtractor alloc] init] sampleSignal:signal];
-    return [[[GMNormExtractor alloc] init] sampleSignal:s];
+  GMGesture *grid = [[[GMGridExtractor alloc] init] sampleSignal:signal];
+  GMGesture *normedGrid = [[[GMNormExtractor alloc] init] sampleSignal:grid];
+  return normedGrid;
 }
 
 @end

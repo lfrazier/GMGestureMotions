@@ -8,6 +8,7 @@
 
 #import "GMFeatureExtractor.h"
 
-@interface GMNormExtractor : GMFeatureExtractor
+/// Normalizes signals to bounds defined by the min/max of the original.
+@interface GMNormExtractor : NSObject<GMFeatureExtractor>
 
 @end

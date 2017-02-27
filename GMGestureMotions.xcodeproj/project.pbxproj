@@ -28,7 +28,6 @@
 		E71451E916B3A88B00C36F52 /* GMGestureClassifier.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451D716B3A88B00C36F52 /* GMGestureClassifier.m */; };
 		E71451EA16B3A88B00C36F52 /* GMDistribution.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451DA16B3A88B00C36F52 /* GMDistribution.m */; };
 		E71451EB16B3A88B00C36F52 /* GMDTWAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451DD16B3A88B00C36F52 /* GMDTWAlgorithm.m */; };
-		E71451EC16B3A88B00C36F52 /* GMFeatureExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451E016B3A88B00C36F52 /* GMFeatureExtractor.m */; };
 		E71451ED16B3A88B00C36F52 /* GMGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451E316B3A88B00C36F52 /* GMGesture.m */; };
 		E71451EE16B3A88B00C36F52 /* GMGestureRecognition.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451E516B3A88B00C36F52 /* GMGestureRecognition.m */; };
 		E71451EF16B3A88B00C36F52 /* GMGestureRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = E71451E816B3A88B00C36F52 /* GMGestureRecorder.m */; };
@@ -69,7 +68,6 @@
 		E71451DC16B3A88B00C36F52 /* GMDTWAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMDTWAlgorithm.h; sourceTree = "<group>"; };
 		E71451DD16B3A88B00C36F52 /* GMDTWAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMDTWAlgorithm.m; sourceTree = "<group>"; };
 		E71451DF16B3A88B00C36F52 /* GMFeatureExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMFeatureExtractor.h; sourceTree = "<group>"; };
-		E71451E016B3A88B00C36F52 /* GMFeatureExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMFeatureExtractor.m; sourceTree = "<group>"; };
 		E71451E216B3A88B00C36F52 /* GMGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGesture.h; sourceTree = "<group>"; };
 		E71451E316B3A88B00C36F52 /* GMGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGesture.m; sourceTree = "<group>"; };
 		E71451E416B3A88B00C36F52 /* GMGestureRecognition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGestureRecognition.h; sourceTree = "<group>"; };
@@ -208,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				E71451DF16B3A88B00C36F52 /* GMFeatureExtractor.h */,
-				E71451E016B3A88B00C36F52 /* GMFeatureExtractor.m */,
 				E77EAFBA16BD8DF500DE49F4 /* GMNormExtractor.h */,
 				E77EAFBB16BD8DF500DE49F4 /* GMNormExtractor.m */,
 				E77EAFBD16BDA14900DE49F4 /* GMGridExtractor.h */,
@@ -316,7 +313,6 @@
 				E71451E916B3A88B00C36F52 /* GMGestureClassifier.m in Sources */,
 				E71451EA16B3A88B00C36F52 /* GMDistribution.m in Sources */,
 				E71451EB16B3A88B00C36F52 /* GMDTWAlgorithm.m in Sources */,
-				E71451EC16B3A88B00C36F52 /* GMFeatureExtractor.m in Sources */,
 				E71451ED16B3A88B00C36F52 /* GMGesture.m in Sources */,
 				E71451EE16B3A88B00C36F52 /* GMGestureRecognition.m in Sources */,
 				E71451EF16B3A88B00C36F52 /* GMGestureRecorder.m in Sources */,

@@ -17,7 +17,7 @@
 
 @implementation GMGestureClassifier
 
-- (id)initWithFeatureExtractor:(GMFeatureExtractor *)featureExtractor {
+- (id)initWithFeatureExtractor:(id<GMFeatureExtractor>)featureExtractor {
   if ( self = [super init] ) {
     _trainingSet = [NSMutableArray array];
     _featureExtractor = featureExtractor;

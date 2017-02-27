@@ -10,6 +10,7 @@
 #import "GMNormExtractor.h"
 #import "GMGridExtractor.h"
 
-@interface GMNormedGridExtractor : GMFeatureExtractor
+/// Both normalizes and trims a given signal to a certain number of steps and certain bounds.
+@interface GMNormedGridExtractor : NSObject<GMFeatureExtractor>
 
 @end
