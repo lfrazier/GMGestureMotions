@@ -7,9 +7,10 @@
 //
 
 @import Foundation;
-#import "GMFeatureExtractor.h"
+
 #import "GMDTWAlgorithm.h"
 #import "GMDistribution.h"
+#import "GMFeatureExtractor.h"
 
 /// Classifies gestures using a feature extractor.
 @interface GMGestureClassifier : NSObject
