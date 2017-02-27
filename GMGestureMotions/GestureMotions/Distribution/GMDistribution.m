@@ -8,34 +8,42 @@
 
 #import "GMDistribution.h"
 
+@interface GMDistribution () {
+  NSString *_best;
+  double _minDistance;
+  NSMutableDictionary *_distribution;
+}
+
+@end
+
 @implementation GMDistribution
 
 - (id)init {
-    if (self = [super init]) {
-        distribution = [NSMutableDictionary dictionary];
-        minDistance = DBL_MAX;
-    }
-    return self;
+  if (self = [super init]) {
+    _distribution = [NSMutableDictionary dictionary];
+    _minDistance = DBL_MAX;
+  }
+  return self;
 }
 
 - (void)addEntryWithTag:(NSString *)tag distance:(double)distance {
-    [distribution setObject:[NSNumber numberWithDouble:distance] forKey:tag];
-    if (distance < minDistance) {
-        minDistance = distance;
-        best = tag;
-    }
+  _distribution[tag] = @(distance);
+  if (distance < _minDistance) {
+    _minDistance = distance;
+    _best = tag;
+  }
 }
 
 - (NSString *)getBestMatch {
-    return best;
+  return _best;
 }
 
 - (double)getBestDistance {
-    return minDistance;
+  return _minDistance;
 }
 
-- (int)size {
-    return [distribution count];
+- (NSUInteger)size {
+  return [_distribution count];
 }
 
 @end
