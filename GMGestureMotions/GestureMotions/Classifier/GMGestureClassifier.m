@@ -152,7 +152,7 @@
   GMGesture *sampledSignal = [_featureExtractor sampleSignal:signal];
 
   for (GMGesture *gesture in _trainingSet) {
-    double dist = [DTWAlgorithm calcDistanceBetweenGesture:gesture andGesture:sampledSignal];
+    double dist = [GMDTWAlgorithm calcDistanceBetweenGesture:gesture andGesture:sampledSignal];
     [distribution addEntryWithTag:gesture.label distance:dist];
   }
 

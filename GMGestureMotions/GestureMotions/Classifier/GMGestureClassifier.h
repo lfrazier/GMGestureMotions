@@ -8,7 +8,7 @@
 
 @import Foundation;
 #import "GMFeatureExtractor.h"
-#import "DTWAlgorithm.h"
+#import "GMDTWAlgorithm.h"
 #import "GMDistribution.h"
 
 /// Classifies gestures using a feature extractor.
