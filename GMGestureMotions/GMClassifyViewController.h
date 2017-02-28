@@ -1,14 +1,14 @@
 //
-//  FirstViewController.h
+//  GMClassifyViewController.h
 //  GMGestureMotions
 //
 //  Created by Lauren on 2/27/17.
 //  Copyright © 2017 Lauren Frazier. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
-@interface FirstViewController : UIViewController
+@interface GMClassifyViewController : UIViewController
 
 
 @end

@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		893B6FCB1E65155500CB56BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 893B6FCA1E65155500CB56BB /* main.m */; };
 		893B6FCE1E65155500CB56BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 893B6FCD1E65155500CB56BB /* AppDelegate.m */; };
-		893B6FD11E65155500CB56BB /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893B6FD01E65155500CB56BB /* FirstViewController.m */; };
-		893B6FD41E65155500CB56BB /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893B6FD31E65155500CB56BB /* SecondViewController.m */; };
+		893B6FD11E65155500CB56BB /* GMLearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893B6FD01E65155500CB56BB /* GMLearnViewController.m */; };
+		893B6FD41E65155500CB56BB /* GMClassifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893B6FD31E65155500CB56BB /* GMClassifyViewController.m */; };
 		893B6FD71E65155500CB56BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 893B6FD51E65155500CB56BB /* Main.storyboard */; };
 		893B6FD91E65155500CB56BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 893B6FD81E65155500CB56BB /* Assets.xcassets */; };
 		893B6FDC1E65155500CB56BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 893B6FDA1E65155500CB56BB /* LaunchScreen.storyboard */; };
@@ -49,10 +49,10 @@
 		893B6FCA1E65155500CB56BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		893B6FCC1E65155500CB56BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		893B6FCD1E65155500CB56BB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		893B6FCF1E65155500CB56BB /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		893B6FD01E65155500CB56BB /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		893B6FD21E65155500CB56BB /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		893B6FD31E65155500CB56BB /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		893B6FCF1E65155500CB56BB /* GMLearnViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLearnViewController.h; sourceTree = "<group>"; };
+		893B6FD01E65155500CB56BB /* GMLearnViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLearnViewController.m; sourceTree = "<group>"; };
+		893B6FD21E65155500CB56BB /* GMClassifyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMClassifyViewController.h; sourceTree = "<group>"; };
+		893B6FD31E65155500CB56BB /* GMClassifyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMClassifyViewController.m; sourceTree = "<group>"; };
 		893B6FD61E65155500CB56BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		893B6FD81E65155500CB56BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		893B6FDB1E65155500CB56BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -135,10 +135,10 @@
 				893B70011E6515CB00CB56BB /* GestureMotions */,
 				893B6FCC1E65155500CB56BB /* AppDelegate.h */,
 				893B6FCD1E65155500CB56BB /* AppDelegate.m */,
-				893B6FCF1E65155500CB56BB /* FirstViewController.h */,
-				893B6FD01E65155500CB56BB /* FirstViewController.m */,
-				893B6FD21E65155500CB56BB /* SecondViewController.h */,
-				893B6FD31E65155500CB56BB /* SecondViewController.m */,
+				893B6FCF1E65155500CB56BB /* GMLearnViewController.h */,
+				893B6FD01E65155500CB56BB /* GMLearnViewController.m */,
+				893B6FD21E65155500CB56BB /* GMClassifyViewController.h */,
+				893B6FD31E65155500CB56BB /* GMClassifyViewController.m */,
 				893B6FD51E65155500CB56BB /* Main.storyboard */,
 				893B6FD81E65155500CB56BB /* Assets.xcassets */,
 				893B6FDA1E65155500CB56BB /* LaunchScreen.storyboard */,
@@ -386,14 +386,14 @@
 			files = (
 				893B70201E6515CB00CB56BB /* GMNormExtractor.m in Sources */,
 				893B70221E6515CB00CB56BB /* GMGestureRecognition.m in Sources */,
-				893B6FD41E65155500CB56BB /* SecondViewController.m in Sources */,
+				893B6FD41E65155500CB56BB /* GMClassifyViewController.m in Sources */,
 				893B6FCE1E65155500CB56BB /* AppDelegate.m in Sources */,
 				893B701E1E6515CB00CB56BB /* GMGridExtractor.m in Sources */,
 				893B701F1E6515CB00CB56BB /* GMNormedGridExtractor.m in Sources */,
 				893B701B1E6515CB00CB56BB /* GMGestureClassifier.m in Sources */,
 				893B701C1E6515CB00CB56BB /* GMDistribution.m in Sources */,
 				893B70231E6515CB00CB56BB /* GMGestureRecorder.m in Sources */,
-				893B6FD11E65155500CB56BB /* FirstViewController.m in Sources */,
+				893B6FD11E65155500CB56BB /* GMLearnViewController.m in Sources */,
 				893B70211E6515CB00CB56BB /* GMGesture.m in Sources */,
 				893B6FCB1E65155500CB56BB /* main.m in Sources */,
 				893B701D1E6515CB00CB56BB /* GMDTWAlgorithm.m in Sources */,
@@ -632,6 +632,7 @@
 				893B6FF81E65155500CB56BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		893B6FF91E65155500CB56BB /* Build configuration list for PBXNativeTarget "GMGestureMotionsTests" */ = {
 			isa = XCConfigurationList;
@@ -640,6 +641,7 @@
 				893B6FFB1E65155500CB56BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		893B6FFC1E65155500CB56BB /* Build configuration list for PBXNativeTarget "GMGestureMotionsUITests" */ = {
 			isa = XCConfigurationList;
@@ -648,6 +650,7 @@
 				893B6FFE1E65155500CB56BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
