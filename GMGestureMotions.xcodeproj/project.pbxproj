@@ -263,6 +263,11 @@
 				CLASSPREFIX = GM;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Lauren Frazier";
+				TargetAttributes = {
+					E714516F16B249A500C36F52 = {
+						DevelopmentTeam = V258QD85M9;
+					};
+				};
 			};
 			buildConfigurationList = E714516A16B249A400C36F52 /* Build configuration list for PBXProject "GMGestureMotions" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -414,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = V258QD85M9;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GMGestureMotions/GMGestureMotions-Prefix.pch";
 				INFOPLIST_FILE = "GMGestureMotions/GMGestureMotions-Info.plist";
@@ -426,6 +432,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = V258QD85M9;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GMGestureMotions/GMGestureMotions-Prefix.pch";
 				INFOPLIST_FILE = "GMGestureMotions/GMGestureMotions-Info.plist";

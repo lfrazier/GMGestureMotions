@@ -6,43 +6,49 @@
 //  Copyright (c) 2017 Lauren Frazier. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <CoreMotion/CoreMotion.h>
+@import CoreMotion;
+@import Foundation;
 
-typedef enum RecordMode {
-    MOTION_DETECTION = 0,
-    PUSH_TO_GESTURE = 1
-} RecordMode;
+/// The two types of recording. GMGestureRecordModeMotionDetection is to classify the gesture,
+/// GMGestureRecordModePushToGesture is to add to a gesture we are learning.
+typedef NS_ENUM(NSUInteger, GMGestureRecordMode) {
+  GMGestureRecordModeMotionDetection,
+  GMGestureRecordModePushToGesture
+};
 
+/// Handles the completion of a gesture recording.
 @protocol GMGestureRecorderDelegate <NSObject>
 
+/// Called when a gesture has been successfully recognized.
 - (void)gestureRecorded:(NSArray *)values;
 
 @end
 
-@interface GMGestureRecorder : NSObject {
-    int MIN_GESTURE_SIZE;
-    float THRESHOLD;
-    BOOL isRecording;
-    int stepsSinceNoMovement;
-    NSMutableArray *gestureValues;
-    CMMotionManager *motionManager;
-    BOOL isRunning;
-    RecordMode recordMode;
-    float deviceUpdateInterval;
-    int noMotionLimit;
-}
+/// Records gestures that are being performed by the user. The recorded gesture could be stored,
+/// classified, etc.
+@interface GMGestureRecorder : NSObject
 
-@property (nonatomic, retain) id<GMGestureRecorderDelegate> delegate;
+@property (nonatomic, weak) id<GMGestureRecorderDelegate> delegate;
 
-- (RecordMode)getRecordMode;
-- (void)setRecordMode:(RecordMode)recMode;
+/// The record mode that the recorder is in. It is either classifying gestures or learning them.
+@property(nonatomic) GMGestureRecordMode recordMode;
+
+/// True if the recorder is running at the moment.
+@property(nonatomic) BOOL isRunning;
+
+/// Sets the threshold that the recorder should use to consider a movement a gesture motion.
 - (void)setThreshold:(float)threshold;
-- (BOOL)isRunning;
+
+/// Pushes ...?
 - (void)pushToGesture:(BOOL)pushed;
-//- (void)handleDeviceUpdate:(CMDeviceMotion *)motion;
+
+/// Starts the recorder.
 - (void)start;
+
+/// Stops the recorder.
 - (void)stop;
-- (void)pause:(BOOL)b;
+
+/// Pauses or unpauses the recorder. If \a pause is true, pauses, otherwise unpauses.
+- (void)pause:(BOOL)pause;
 
 @end

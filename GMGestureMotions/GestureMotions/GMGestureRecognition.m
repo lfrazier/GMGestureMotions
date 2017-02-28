@@ -47,14 +47,14 @@
   _activeTrainingSet = trainingSetName;
   _activeLearnLabel = gestureName;
   _isLearning = YES;
-  [_recorder setRecordMode:PUSH_TO_GESTURE];
+  [_recorder setRecordMode:GMGestureRecordModePushToGesture];
   [_recorder pushToGesture:YES];
   [_recorder start];
 }
 
 - (void)stopLearnMode {
   [_recorder pushToGesture:NO];
-  [_recorder setRecordMode:MOTION_DETECTION];
+  [_recorder setRecordMode:GMGestureRecordModeMotionDetection];
   [_recorder stop];
   _isLearning = NO;
 }
@@ -66,7 +66,7 @@
 - (void)startClassificationModeWithTrainingSet:(NSString *)trainingSet {
   _activeTrainingSet = trainingSet;
   _isClassifying = YES;
-  [_recorder setRecordMode:MOTION_DETECTION];
+  [_recorder setRecordMode:GMGestureRecordModeMotionDetection];
   [_recorder start];
   [_classifier loadTrainingSet:trainingSet];
 }
