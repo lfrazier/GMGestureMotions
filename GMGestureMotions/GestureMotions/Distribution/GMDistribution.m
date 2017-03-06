@@ -34,11 +34,11 @@
   }
 }
 
-- (NSString *)getBestMatch {
+- (NSString *)bestMatch {
   return _best;
 }
 
-- (double)getBestDistance {
+- (double)bestDistance {
   return _minDistance;
 }
 

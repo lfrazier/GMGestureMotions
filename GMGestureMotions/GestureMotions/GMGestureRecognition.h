@@ -15,6 +15,8 @@
 /// Handles gesture recording and recognition events.
 @protocol GMGestureRecognitonDelegate <NSObject>
 
+@optional
+
 /// Called when a gesture is successfully learned.
 - (void)gestureLearned:(NSString *)gestureName;
 
@@ -39,7 +41,7 @@
 + (GMGestureRecognition *)sharedInstance;
 
 /// Starts learn mode with the given \a trainingSetName and \a gestureName.
-- (void)startLearnMode:(NSString *)trainingSetName forGesture:(NSString *)gestureName;
+- (void)startLearnModeForGesture:(NSString *)gestureName inSet:(NSString *)trainingSetName;
 
 /// Stops learn mode.
 - (void)stopLearnMode;

@@ -43,7 +43,7 @@
 
 #pragma mark - Public
 
-- (void)startLearnMode:(NSString *)trainingSetName forGesture:(NSString *)gestureName {
+- (void)startLearnModeForGesture:(NSString *)gestureName inSet:(NSString *)trainingSetName {
   _activeTrainingSet = trainingSetName;
   _activeLearnLabel = gestureName;
   _isLearning = YES;

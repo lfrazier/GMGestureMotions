@@ -16,10 +16,10 @@
 - (void)addEntryWithTag:(NSString *)tag distance:(double)distance;
 
 /// Returns the tag of the best match in the distribution.
-- (NSString *)getBestMatch;
+- (NSString *)bestMatch;
 
 /// Returns the distance of the best match in the distribution.
-- (double)getBestDistance;
+- (double)bestDistance;
 
 /// Returns the size of the distribution (number of entries).
 - (NSUInteger)size;
