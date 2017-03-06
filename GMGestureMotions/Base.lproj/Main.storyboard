@@ -104,11 +104,11 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LXz-fs-RHp">
-                                <rect key="frame" x="16" y="286" width="343" height="214"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXz-fs-RHp">
+                                <rect key="frame" x="16" y="286" width="343" height="324"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="214" id="Kiy-lG-cwx"/>
+                                    <constraint firstAttribute="height" constant="324" id="Kiy-lG-cwx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -131,7 +131,7 @@
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="64" id="SUE-o8-IfH"/>
                             <constraint firstItem="zEq-FU-wV5" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="67" id="VRk-t4-lfA"/>
                             <constraint firstItem="Ucf-6t-dJa" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" constant="257" id="aaA-aY-Kd0"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="LXz-fs-RHp" secondAttribute="bottom" constant="118" id="bbg-aj-8x5"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="LXz-fs-RHp" secondAttribute="bottom" constant="8" id="bbg-aj-8x5"/>
                             <constraint firstItem="Ucf-6t-dJa" firstAttribute="top" secondItem="NDk-cv-Gan" secondAttribute="bottom" constant="86" id="gOr-Pf-YFd"/>
                             <constraint firstItem="LXz-fs-RHp" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="iGt-N7-qD1"/>
                             <constraint firstItem="LXz-fs-RHp" firstAttribute="top" secondItem="Ucf-6t-dJa" secondAttribute="bottom" constant="8" symbolic="YES" id="sD6-Hd-mpT"/>

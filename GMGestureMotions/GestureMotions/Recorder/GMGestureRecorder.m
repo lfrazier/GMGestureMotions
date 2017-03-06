@@ -65,7 +65,7 @@ static int kNoMotionLimit;
 }
 
 - (void)handleDeviceUpdate:(CMAccelerometerData *)motion {
-  NSLog(@"X: %f, Y: %f, Z:%f", motion.acceleration.x, motion.acceleration.y, motion.acceleration.z);
+  //NSLog(@"X: %f, Y: %f, Z:%f", motion.acceleration.x, motion.acceleration.y, motion.acceleration.z);
   NSArray *value = @[@(motion.acceleration.x), @(motion.acceleration.y), @(motion.acceleration.z)];
   switch (_recordMode) {
     case GMGestureRecordModeMotionDetection:

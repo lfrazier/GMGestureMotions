@@ -22,6 +22,7 @@ static NSString *const kDefaultTrainingSet = @"kDefaultTrainingSet";
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  [[GMGestureRecognition sharedInstance] setThreshold:3];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

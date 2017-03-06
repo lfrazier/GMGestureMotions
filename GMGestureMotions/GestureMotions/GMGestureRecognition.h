@@ -68,7 +68,7 @@
 - (BOOL)isClassifying;
 
 /// Sets the \a threshold for recognition. The higher the threshold, the more strict the
-/// classifier will be.
+/// classifier will be. Values between 1 and 5 are typical.
 - (void)setThreshold:(float)threshold;
 
 @end
